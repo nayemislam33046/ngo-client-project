@@ -1,0 +1,1323 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pridi', sans-serif;
+    line-height: 1.6;
+    color: #262626;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 140px;
+}
+
+/* Header Styles - Exact Figma Match */
+.header {
+    background-color: #002556;
+    color: white;
+}
+
+.top-bar {
+    background-color: #ffffff;
+    color: #262626;
+    padding: 35px 0 0;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 673px;
+    height: 82px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.logo {
+    width: 51px;
+    height: 50px;
+    background: linear-gradient(135deg, #3D82CF 0%, #002556 100%);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.foundation-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #002556;
+    line-height: 1;
+    width: 193px;
+    height: 35px;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    width: 241px;
+}
+
+.language-flags {
+    display: flex;
+    gap: 4px;
+}
+
+.flag-item {
+    width: 34px;
+    height: 15px;
+    background: linear-gradient(135deg, #3D82CF 0%, #002556 100%);
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-item::after {
+    content: 'BD';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.flag-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    border: 1px solid #828282;
+    border-radius: 4px;
+    background: white;
+    font-size: 12px;
+    color: #363636;
+    cursor: pointer;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+    width: 37px;
+    height: 21px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    text-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+    background-color: #3D82CF;
+    color: white;
+    width: 95px;
+    height: 40px;
+}
+
+.btn-secondary {
+    background-color: #3D82CF;
+    color: white;
+    width: 131px;
+    height: 40px;
+}
+
+/* Navigation - Exact Figma Match */
+.navigation {
+    background-color: #002556;
+    padding: 0;
+    height: 45px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+    list-style: none;
+    height: 45px;
+}
+
+.nav-item {
+    position: relative;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 28px;
+}
+
+.nav-item.active a {
+    color: #02B4F0;
+}
+
+.nav-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #02B4F0;
+}
+
+.nav-item.dropdown svg {
+    margin-left: 4px;
+}
+
+/* Hero Section - Exact Figma Match */
+.hero {
+    background-color: #F5F5F5;
+    padding: 40px 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    align-items: flex-start;
+}
+
+.donation-form-container {
+    flex: 1;
+    max-width: 600px;
+}
+
+.donation-form {
+    background: white;
+    border-radius: 6px;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    height: 148px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.form-header h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #363636;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #828282;
+    border-radius: 6px;
+    background: white;
+    height: 40px;
+}
+
+.form-field label {
+    font-size: 18px;
+    font-weight: 400;
+    color: #363636;
+    flex: 1;
+}
+
+.btn-donate {
+    background-color: #3D82CF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 166px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: -1px 1px 9.8px 0px rgba(61, 130, 207, 0.25), inset 0px -3px 14.2px 0px rgba(49, 47, 47, 0.25);
+    text-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+}
+
+.donation-note {
+    text-align: center;
+    font-size: 16px;
+    color: #545454;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.3;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 472px;
+    height: 444px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 24px 50px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section - Exact Figma Match */
+.about {
+    background-color: white;
+    padding: 40px 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    align-items: flex-start;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 472px;
+    height: 444px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 651px;
+    height: 436px;
+}
+
+.about-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3D82CF;
+    margin-bottom: 26px;
+    line-height: 0.83;
+    height: 25px;
+}
+
+.separator {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #BBBBBB 3px, #BBBBBB 1px, #BBBBBB 1px);
+    margin-bottom: 26px;
+}
+
+.about-text p {
+    font-size: 22px;
+    font-weight: 400;
+    color: #545454;
+    line-height: 1.18;
+    margin-bottom: 20px;
+    width: 629px;
+    height: 318px;
+}
+
+/* Donation Funds Section - Exact Figma Match */
+.donation-funds {
+    background-color: #F5F5F5;
+    padding: 35px 0;
+}
+
+.donation-funds h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    height: 25px;
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.funds-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 368px);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1164px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.fund-card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 368px;
+}
+
+.fund-image {
+    height: 248px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3D82CF 0%, #002556 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.fund-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fund-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.fund-content h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #3D82CF;
+    margin-bottom: 15px;
+    line-height: 1.08;
+    height: 33px;
+}
+
+.fund-content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #262626;
+    line-height: 1.25;
+    margin-bottom: 15px;
+    max-width: 289px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 67px;
+}
+
+.btn-donate-now {
+    background-color: #3D82CF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    text-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn-more {
+    background-color: #3D82CF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    width: 318px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    text-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ongoing Projects Section - Exact Figma Match */
+.ongoing-projects {
+    background-color: white;
+    padding: 35px 0;
+}
+
+.ongoing-projects h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    height: 25px;
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 368px);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1164px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #E8E8E8;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 368px;
+}
+
+.project-image {
+    height: 248px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3D82CF 0%, #002556 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 18px 25px;
+}
+
+.project-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3D82CF;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-align: center;
+    height: 67px;
+}
+
+.project-content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #262626;
+    line-height: 1.2;
+    text-align: center;
+    height: 145px;
+}
+
+/* Blog Section - Exact Figma Match */
+.blog {
+    background-color: #F5F5F5;
+    padding: 35px 0;
+}
+
+.blog h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    height: 25px;
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 368px);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1164px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 368px;
+}
+
+.blog-image {
+    height: 254px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3D82CF 0%, #002556 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 10px;
+}
+
+.blog-date {
+    font-size: 12px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    height: 13px;
+}
+
+.blog-content h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #262626;
+    line-height: 1.2;
+    height: 20px;
+}
+
+/* Events Section - Exact Figma Match */
+.events {
+    background-color: white;
+    padding: 35px 0;
+}
+
+.events h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    height: 25px;
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 368px);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1164px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.event-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 368px;
+    height: 200px;
+}
+
+.event-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #3D82CF 0%, #002556 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.event-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.event-content h3 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 33px;
+    line-height: 1.28;
+    text-align: center;
+    height: 74px;
+}
+
+.event-content p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 33px;
+    text-align: center;
+    height: 227px;
+}
+
+.btn-see-more {
+    background-color: #3D82CF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    text-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+    display: block;
+    margin: 0 auto;
+    width: 118px;
+    height: 37px;
+}
+
+/* Video Section - Exact Figma Match */
+.video {
+    background-color: #F5F5F5;
+    padding: 35px 0;
+}
+
+.video h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    height: 25px;
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 368px);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1164px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.video-card {
+    text-align: center;
+    width: 368px;
+}
+
+.video-thumbnail {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 207px;
+    background: linear-gradient(135deg, #3D82CF 0%, #002556 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.video-card h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #262626;
+    line-height: 1.2;
+    text-align: center;
+    height: 18px;
+}
+
+/* Gallery Section - Exact Figma Match */
+.gallery {
+    background-color: white;
+    padding: 35px 0;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    height: 25px;
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 268px);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1177px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.gallery-item {
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3D82CF 0%, #002556 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(3),
+.gallery-item:nth-child(4) {
+    height: 179px;
+}
+
+.gallery-item:nth-child(5),
+.gallery-item:nth-child(6),
+.gallery-item:nth-child(7),
+.gallery-item:nth-child(8) {
+    height: 201px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Global Presence Section - Exact Figma Match */
+.global-presence {
+    background-color: #F5F5F5;
+    padding: 40px 0 51px;
+    height: 1384px;
+}
+
+.global-presence h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 45px;
+    line-height: 1.2;
+    height: 25px;
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-container {
+    margin-bottom: 45px;
+    height: 545px;
+}
+
+.map {
+    position: relative;
+    background: #DDDDDD;
+    border-radius: 16px;
+    height: 494px;
+    overflow: hidden;
+    box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.18);
+    width: 1164px;
+    margin: 0 auto;
+}
+
+.map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.marker {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.marker-icon {
+    width: 25px;
+    height: 41px;
+    background: #FF0033;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+}
+
+.marker-label {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    white-space: nowrap;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.offices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 51px;
+    margin-bottom: 30px;
+    width: 1144px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.office-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.office-card {
+    text-align: center;
+}
+
+.office-card h3 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #093471;
+    margin-bottom: 18px;
+    line-height: 1.2;
+    height: 28px;
+}
+
+.office-card p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #212529;
+    line-height: 1.5;
+}
+
+.registered-office {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+}
+
+.live-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-button {
+    background: linear-gradient(152deg, rgba(72, 147, 230, 1) 0%, rgba(61, 130, 207, 1) 100%);
+    border-radius: 4px;
+    padding: 6px 21px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    box-shadow: 14px 10px 25px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    width: 161px;
+    height: 55px;
+}
+
+/* Footer - Exact Figma Match */
+.footer {
+    background-color: #093471;
+    color: white;
+    padding: 35px 0 0;
+}
+
+.footer-content {
+    border-bottom: 1px solid #D7D7D7;
+    padding-bottom: 35px;
+}
+
+.footer-main {
+    display: flex;
+    gap: 37px;
+    padding: 35px;
+}
+
+.footer-logo {
+    flex: 1;
+    max-width: 426px;
+    height: 335px;
+}
+
+.footer-logo .logo {
+    width: 51px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-logo h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #184A86;
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #404040;
+    line-height: 1.21;
+    margin-bottom: 20px;
+    height: 115px;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links a {
+    width: 30px;
+    height: 30px;
+    background: rgba(24, 74, 134, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 37px;
+    flex: 1;
+    height: 335px;
+}
+
+.footer-column h4 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #F5F5F5;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+    line-height: 1.25;
+    height: 24px;
+}
+
+.footer-column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column li a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.55;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 23px;
+}
+
+.contact-item span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #F5F5F5;
+    line-height: 1.6;
+}
+
+.btn-donate-footer {
+    background-color: white;
+    color: #000000;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    width: 91px;
+    height: 39px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    text-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+    margin-top: 20px;
+}
+
+.footer-bottom {
+    background-color: #093471;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 20px;
+        height: auto;
+        padding: 20px 0;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .funds-grid,
+    .projects-grid,
+    .blog-grid,
+    .events-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .offices-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .funds-grid,
+    .projects-grid,
+    .blog-grid,
+    .events-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Animation and Hover Effects */
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-donate:hover,
+.btn-donate-now:hover,
+.btn-see-more:hover,
+.btn-donate-footer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #02B4F0;
+    transition: color 0.3s ease;
+}
+
+.fund-card:hover,
+.project-card:hover,
+.blog-card:hover,
+.event-card:hover,
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus States */
+button:focus,
+a:focus {
+    outline: 2px solid #3D82CF;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .live-chat {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+}
