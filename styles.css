@@ -613,45 +613,79 @@ li.nav-item.dropdown {
   text-decoration: underline;
 }
 
-/* Hero Image */
+/* Hero Slider */
+
 .hero-slider {
   width: 100%;
   height: 496px;
   overflow: hidden;
+  position: relative;
   border-radius: 10px;
   margin-top: 25px;
 }
 
+/* Track */
 .hero-track {
   display: flex;
-  width: max-content;
   height: 100%;
-  animation: scroll 22s linear infinite;
+  transition: 0.5s ease;
 }
 
-.hero-group {
-  display: flex;
-  width: 200vw;
+/* Each Slide */
+.hero-slide {
+  min-width: 100%;
   height: 100%;
 }
 
-.hero-group img {
-  width: 100vw;
+.hero-slide img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
-  margin: 0 5px;
   border-radius: 10px;
+  user-select: none;
+  pointer-events: none;
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-200vw);
-  }
+/* Buttons */
+.hero-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
 }
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Pagination */
+.hero-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #aaa;
+  cursor: pointer;
+}
+
+.hero-dots .active {
+  background: white;
+}
+
 
 /* About Section */
 .about {
@@ -1447,557 +1481,6 @@ li.nav-item.dropdown {
   line-height: 1.5;
 }
 
-/* laptop or small desktop screen Design */
-@media (max-width: 1228px) {
-  /* header */
-  .header .top-bar {
-    padding: 30px 0;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    font-size: 14px;
-  }
-
-  .btn-primary {
-    height: 37px;
-  }
-
-  .btn-secondary {
-    width: 120px;
-    height: 37px;
-  }
-
-  /* nav */
-
-  .nav-menu {
-    gap: 18px;
-  }
-
-  .dropdown svg {
-    transform: scale(0.9);
-  }
-
-  .nav-item a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 400;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  /* donation form */
-  .form-field-items,
-  .select-trigger {
-    width: 200px;
-    height: 44px;
-  }
-
-  .form-field-items button {
-  top: 7px;
-}
-
-  /* hero section */
-  .hero-slider {
-    height: 400px;
-  }
-
-  .about-text p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #545454;
-    line-height: 1.18;
-    margin-bottom: 20px;
-  }
-
-  /* ongoing project */
-  .project-card {
-    width: 281px;
-  }
-
-  /* blog content */
-  .blog-card {
-    width: 281px;
-  }
-
-  .blog-content h3 {
-    font-size: 16px;
-  }
-
-  /* event content */
-  .event-card {
-    width: 274px;
-  }
-
-  .event-content h3 {
-    font-size: 25px;
-  }
-
-  .event-content p {
-    font-size: 16px;
-  }
-
-  /* video content */
-  .video-card iframe {
-    width: 300px;
-    height: 169px;
-  }
-
-  /* gallery content */
-  .gallery-grid {
-    grid-template-columns: repeat(4, minmax(240px, 1fr));
-    gap: 10px;
-  }
-
-  /* offices section */
-
-  .office-card {
-    width: 300px;
-  }
-
-  .office-card h3 {
-    font-size: 24px;
-  }
-  .office-card p {
-    font-size: 14px;
-  }
-
-  /* footer section */
-  .footer-logo .footer-foundation-name {
-    font-size: 16px;
-  }
-  .footer-logo h3 {
-    font-size: 15px;
-  }
-  .footer-column h4 {
-    font-size: 17px;
-  }
-
-  .footer-logo p {
-    font-size: 13px;
-  }
-
-  .footer-bottom p {
-    font-size: 14px;
-  }
-}
-
-/* Tablet Design */
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 15px;
-  }
-
-  .hero {
-padding: 10px 20px 40px 20px;
-  }
-
-  .about {
-    padding: 40px 40px;
-  }
-
-  .gallery {
-    padding: 35px 40px;
-  }
-
-  .global-presence {
-    padding: 40px 40px 51px;
-  }
-
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-  }
-  .menu-toggle span {
-    display: block;
-    width: 27px;
-    height: 2px;
-    margin: 5px;
-    background-color: black;
-    border-radius: 2px;
-  }
-
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-  }
-
-  body.menu-open {
-    overflow: hidden;
-  }
-
-  .menu-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.192);
-    backdrop-filter: blur(6px);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    z-index: 9990;
-  }
-
-  .menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .navigation {
-    position: fixed;
-    top: 0;
-    left: -50%;
-    width: 35%;
-    height: 130vh;
-    background: #fff;
-    z-index: 9999;
-    padding-top: 40px;
-    transition: 0.35s ease;
-    overflow-y: auto;
-    display: block;
-  }
-
-  
-  .navigation .logo-section,
-  .navigation span,
-  .navigation hr {
-    display: block;
-  }
-
-  .menu-close {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #000000;
-  }
-
-  .navigation.active {
-    left: 0;
-  }
-
-  .logo-section {
-    padding-bottom: 20px;
-    gap: 6px;
-  }
-
-  hr {
-    background-color: #dee2e6;
-    border: none;
-    margin-bottom: 20px;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 3px;
-    border-radius: 2px;
-  }
-
-  .navigation .logo-section .logo-parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .navigation .logo-section .logo-parent .foundation-names p{
-   font-size: 17px;
-  }
-
-  .logo img {
-    transform: scale(1.4);
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 0 20px;
-  }
-
-  .nav-item {
-    width: 100%;
-    border-bottom: 1px solid #eee;
-  }
-
-  .nav-item a {
-    color: #111;
-    width: 100%;
-    padding: 14px 0;
-    justify-content: space-between;
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-menu a {
-    padding-left: 15px;
-    font-size: 14px;
-  }
-
-  /* donation form */
-
-  .donation-form {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(268px, 1fr));
-    gap: 5px;
-  }
-
-  .form-field,
-  .custom-select,
-  .form-field-items,
-  .select-trigger,
-  .btn-donate {
-    width: 100%;
-  }
-  .form-field input,
-  .form-field select {
-    width: 100%;
-  }
-
-.form-field-items button {
-  top: 6px;
-}
-
-/* hero slider */
-.hero-slider {
-    height: 350px;
-  }
-
-  /* About Section */
-  .container {
-    padding: 0 0;
-  }
-  .about-content{
-    align-items: stretch;
-    gap:20px;
-  }
-
-  .about-image img{
-    height: 100%;
-  }
-
-  .about-text h2{
-    width: 210px;
-    line-height: 1.10;
-    font-weight: 650;
-    font-size: 22px;
-  }
-
-  /* donation fund section */
-  .container {
-    padding: 0 20px;
-  }
-
-    /* Ongoing Projects Section  */
-  .project-card{
-    width:300px;
-  }
-
-  /* blog section */
-  .blog-card{
-    width:300px;
-  }
-
-  /* video section */
-  .video-grid{
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
-  /* gallery section */
-  .gallery-grid{
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    gap: 20px;
-  }
-
-  .gallery-item img{
-    height: 190px;
-  }
-
-  /* global presence section */
-  
-  .global-presence{
-    padding:0;
-  }
-
-  /* office section */
-  .offices-grid{
-    padding-bottom: 90px;
-  }
-  .offices-row {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.office-group{
-  flex-direction: column;
-}
-
-  .office-card{
-    height: 150px;
-  }
-
-  /* Footer section */
-  .footer-logo{
-    width:40%;
-    padding: 35px 30px;
-  }
-  
-  .footer-columns{
-  width: 60%;
-  flex-direction: column;
-  padding: 30px 40px;
- }
-  .footer-logo .logo-section{
-    margin-bottom:10px;
-  }
-  .footer-logo .footer-foundation-name{
-    font-size: 18px;
-  }
-  .footer-logo.footer-foundation-names p{
-    line-height: 1.4;
-  }
-
-  .footer-space{
-    padding-bottom: 45px;
-  }
-
-  .footer-columns .footer-column-parent{
-  padding-bottom: 25px;
-} 
- 
-
-}
-
-/* fix style */
-@media (min-width: 941px) and (max-width: 1023px) {
-  /* Ongoing Projects Section */
-  .project-card{
-    width:340px;
-  }
-
-  /* blog section */
-  .blog-card{
-    width:340px;
-  }
-
-  /* event section */
-  .event-card{
-    width:302px;
-  }
-
-  /* gallery section */
-  .gallery-item img{
-    height: 260px;
-  }
-
-  /* footer section */
-.footer-logo .footer-foundation-name{
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .top-bar-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    height: auto;
-    padding-bottom: 20px;
-  }
-
-  .nav-menu {
-    flex-wrap: wrap;
-    gap: 20px;
-    height: auto;
-    padding: 20px 0;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .about-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .funds-grid,
-  .projects-parent,
-  .blog-parent,
-  .events-grid,
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  .offices-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-main {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .footer-columns {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 20px;
-  }
-
-  .hero {
-    padding: 20px 20px;
-  }
-
-  .about {
-    padding: 20px 20px;
-  }
-
-  .gallery {
-    padding: 20px 20px;
-  }
-
-  .global-presence {
-    padding: 20px 20px 30px;
-  }
-
-  .funds-grid,
-  .projects-parent,
-  .blog-parent,
-  .events-grid,
-  .video-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
 /* Animation and Hover Effects */
 .btn-primary:hover,
 .btn-secondary:hover,
@@ -2019,7 +1502,7 @@ padding: 10px 20px 40px 20px;
 .project-card:hover,
 .blog-card:hover,
 .event-card:hover,
-.video-card:hover {
+.video iframe:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
