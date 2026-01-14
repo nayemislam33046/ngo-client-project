@@ -107,54 +107,54 @@ document.querySelectorAll(".video-thumbnail").forEach((video) => {
   });
 
 // Navigation functionality
-function initNavigation() {
-  const navItems = document.querySelectorAll(".nav-item");
-  const navLinks = document.querySelectorAll(".nav-item a");
+// function initNavigation() {
+//   const navItems = document.querySelectorAll(".nav-item");
+//   const navLinks = document.querySelectorAll(".nav-item a");
 
-  // Add click handlers for navigation items
-  navItems.forEach((item) => {
-    const link = item.querySelector("a");
-    if (link) {
-      link.addEventListener("click", function (e) {
-        // Remove active class from all items
-        navItems.forEach((navItem) => navItem.classList.remove("active"));
+//   // Add click handlers for navigation items
+//   navItems.forEach((item) => {
+//     const link = item.querySelector("a");
+//     if (link) {
+//       link.addEventListener("click", function (e) {
+//         // Remove active class from all items
+//         navItems.forEach((navItem) => navItem.classList.remove("active"));
 
-        // Add active class to clicked item
-        item.classList.add("active");
+//         // Add active class to clicked item
+//         item.classList.add("active");
 
-        // Handle smooth scrolling for anchor links
-        const href = link.getAttribute("href");
-        if (href && href.startsWith("#")) {
-          e.preventDefault();
-          const targetId = href.substring(1);
-          const targetElement = document.getElementById(targetId);
+//         // Handle smooth scrolling for anchor links
+//         const href = link.getAttribute("href");
+//         if (href && href.startsWith("#")) {
+//           e.preventDefault();
+//           const targetId = href.substring(1);
+//           const targetElement = document.getElementById(targetId);
 
-          if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        }
-      });
-    }
-  });
+//           if (targetElement) {
+//             targetElement.scrollIntoView({
+//               behavior: "smooth",
+//               block: "start",
+//             });
+//           }
+//         }
+//       });
+//     }
+//   });
 
-  // Handle dropdown menus
-  const dropdownItems = document.querySelectorAll(".nav-item.dropdown");
-  dropdownItems.forEach((item) => {
-    const link = item.querySelector("a");
-    const svg = item.querySelector("svg");
+//   // Handle dropdown menus
+//   const dropdownItems = document.querySelectorAll(".nav-item.dropdown");
+//   dropdownItems.forEach((item) => {
+//     const link = item.querySelector("a");
+//     const svg = item.querySelector("svg");
 
-    if (link && svg) {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        // Toggle dropdown (you can implement dropdown functionality here)
-        console.log("Dropdown clicked:", link.textContent);
-      });
-    }
-  });
-}
+//     if (link && svg) {
+//       link.addEventListener("click", function (e) {
+//         e.preventDefault();
+//         // Toggle dropdown (you can implement dropdown functionality here)
+//         console.log("Dropdown clicked:", link.textContent);
+//       });
+//     }
+//   });
+// }
 
 // Donation form functionality
 function initDonationForm() {
@@ -228,28 +228,28 @@ function addFormInputs() {
 }
 
 // custom select for donation
-const select = document.querySelector(".custom-select");
-const head = select.querySelector(".select-head");
-const options = select.querySelectorAll(".select-options li");
-const realSelect = document.getElementById("donation");
+// const select = document.querySelector(".custom-select");
+// const head = select.querySelector(".select-head");
+// const options = select.querySelectorAll(".select-options li");
+// const realSelect = document.getElementById("donation");
 
-head.addEventListener("click", () => {
-  select.classList.toggle("active");
-});
+// head.addEventListener("click", () => {
+//   select.classList.toggle("active");
+// });
 
-options.forEach((option) => {
-  option.addEventListener("click", () => {
-    head.textContent = option.textContent;
-    realSelect.value = option.dataset.value;
-    select.classList.remove("active");
-  });
-});
+// options.forEach((option) => {
+//   option.addEventListener("click", () => {
+//     head.textContent = option.textContent;
+//     realSelect.value = option.dataset.value;
+//     select.classList.remove("active");
+//   });
+// });
 
-document.addEventListener("click", (e) => {
-  if (!select.contains(e.target)) {
-    select.classList.remove("active");
-  }
-});
+// document.addEventListener("click", (e) => {
+//   if (!select.contains(e.target)) {
+//     select.classList.remove("active");
+//   }
+// });
 
 function showDonationModal(data) {
   // Create modal
