@@ -48,8 +48,8 @@
   }
 
   .form-field-items button {
-  top: 7px;
-}
+    top: 7px;
+  }
 
   /* hero section */
   .hero-slider {
@@ -143,7 +143,7 @@
   }
 
   .hero {
-padding: 10px 20px 40px 20px;
+    padding: 10px 20px 40px 20px;
   }
 
   .about {
@@ -212,7 +212,6 @@ padding: 10px 20px 40px 20px;
     display: block;
   }
 
-  
   .navigation .logo-section,
   .navigation span,
   .navigation hr {
@@ -234,7 +233,7 @@ padding: 10px 20px 40px 20px;
     left: 0;
   }
 
-  .logo-section {
+  .navigation .logo-section {
     padding-bottom: 20px;
     gap: 6px;
   }
@@ -257,8 +256,8 @@ padding: 10px 20px 40px 20px;
     gap: 6px;
   }
 
-  .navigation .logo-section .logo-parent .foundation-names p{
-   font-size: 17px;
+  .navigation .logo-section .logo-parent .foundation-names p {
+    font-size: 17px;
   }
 
   .logo img {
@@ -313,31 +312,31 @@ padding: 10px 20px 40px 20px;
     width: 100%;
   }
 
-.form-field-items button {
-  top: 6px;
-}
+  .form-field-items button {
+    top: 6px;
+  }
 
-/* hero slider */
-.hero-slider {
-    height: 350px;
+  /* hero slider */
+  .hero-slider {
+    height: 310px;
   }
 
   /* About Section */
   .container {
     padding: 0 0;
   }
-  .about-content{
+  .about-content {
     align-items: stretch;
-    gap:20px;
+    gap: 20px;
   }
 
-  .about-image img{
+  .about-image img {
     height: 100%;
   }
 
-  .about-text h2{
+  .about-text h2 {
     width: 210px;
-    line-height: 1.10;
+    line-height: 1.1;
     font-weight: 650;
     font-size: 22px;
   }
@@ -347,124 +346,126 @@ padding: 10px 20px 40px 20px;
     padding: 0 20px;
   }
 
-    /* Ongoing Projects Section  */
-  .project-card{
-    width:300px;
+  /* Ongoing Projects Section  */
+  .project-card {
+    width: 300px;
   }
 
   /* blog section */
-  .blog-card{
-    width:300px;
+  .blog-card {
+    width: 300px;
   }
 
   /* video section */
-  .video-grid{
+  .video-grid {
     flex-wrap: wrap;
     gap: 30px;
   }
 
   /* gallery section */
-  .gallery-grid{
+  .gallery-grid {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 20px;
   }
 
-  .gallery-item img{
+  .gallery-item img {
     height: 190px;
   }
 
   /* global presence section */
-  
-  .global-presence{
-    padding:0;
+
+  .global-presence {
+    padding: 0;
   }
 
   /* office section */
-  .offices-grid{
+  .offices-grid {
     padding-bottom: 90px;
   }
   .offices-row {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: row;
-  gap: 20px;
-}
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+  }
 
-.office-group{
-  flex-direction: column;
-}
+  .office-group {
+    flex-direction: column;
+  }
 
-  .office-card{
+  .office-card {
     height: 150px;
   }
 
   /* Footer section */
-  .footer-logo{
-    width:40%;
+  .footer-logo {
+    width: 40%;
     padding: 35px 30px;
   }
-  
-  .footer-columns{
-  width: 60%;
-  flex-direction: column;
-  padding: 30px 40px;
- }
-  .footer-logo .logo-section{
-    margin-bottom:10px;
+
+  .footer-columns {
+    width: 60%;
+    flex-direction: column;
+    padding: 30px 40px;
   }
-  .footer-logo .footer-foundation-name{
+  .footer-logo .logo-section {
+    margin-bottom: 10px;
+  }
+  .footer-logo .footer-foundation-name {
     font-size: 18px;
   }
-  .footer-logo.footer-foundation-names p{
+  .footer-logo.footer-foundation-names p {
     line-height: 1.4;
   }
 
-  .footer-space{
+  .footer-space {
     padding-bottom: 45px;
   }
 
-  .footer-columns .footer-column-parent{
-  padding-bottom: 25px;
-} 
- 
-
+  .footer-columns .footer-column-parent {
+    padding-bottom: 25px;
+  }
 }
 
 /* fix style */
 @media (min-width: 941px) and (max-width: 1023px) {
+  /* donation form section */
+  .hero-slider {
+    height: 350px;
+  }
   /* Ongoing Projects Section */
-  .project-card{
-    width:340px;
+  .project-card {
+    width: 340px;
   }
 
   /* blog section */
-  .blog-card{
-    width:340px;
+  .blog-card {
+    width: 340px;
   }
 
   /* event section */
-  .event-card{
-    width:302px;
+  .event-card {
+    width: 302px;
   }
 
   /* gallery section */
-  .gallery-item img{
+  .gallery-item img {
     height: 260px;
   }
 
   /* footer section */
-.footer-logo .footer-foundation-name{
+  .footer-logo .footer-foundation-name {
     font-size: 20px;
   }
 }
 
 /* lerge mobile */
 @media (max-width: 767px) {
-
-    .container{
-        padding:0;
-    }
+  /* header section */
+  .container {
+    padding: 0;
+  }
   .top-bar-content {
     align-items: end;
     gap: 10px;
@@ -472,46 +473,192 @@ padding: 10px 20px 40px 20px;
     padding-bottom: 20px;
   }
 
-  .logo-section{
+  .logo-section {
     padding: 0;
   }
 
-  .foundation-names .foundation-name{
-    display:none;
+  .foundation-names .foundation-name {
+    display: none;
   }
 
+  /* navigation section */
+  .navigation {
+    height: 140vh;
+    width: 50%;
+  }
   .nav-menu {
     flex-wrap: wrap;
     gap: 20px;
     height: auto;
-    padding: 20px 0;
+    padding: 0 15px;
   }
 
-  .menu-toggle{
+  .nav-menu a {
+    padding: 5px 0;
+  }
+
+  .navigation-names .foundation-name {
+    display: block;
+  }
+
+  .navigation .logo-section .logo-parent {
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  hr {
+    width: 90%;
+  }
+
+  .menu-toggle {
     transform: scale(0.81);
   }
 
+  /* hero section */
+  .hero-parent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-slider {
+    height: 210px;
+    order: 1;
+  }
   .hero-content {
     flex-direction: column;
+    order: 2;
     gap: 30px;
+  }
+
+  /* donation form section */
+  .donation-form-container {
+    padding: 25px 10px;
+  }
+  .donation-form {
+    grid-template-columns: repeat(1, minmax(268px, 1fr));
+    gap: 15px;
+  }
+
+  .donation-note {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .about-content {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-text h2 {
+    margin-bottom: 15px;
+  }
+
+  .separator {
+    width: 80%;
+  }
+
+  /* donation fund */
+
+  .donation-funds h2 {
+    font-size: 18px;
+  }
+
+  .fund-card {
+    margin: 0 80px;
+  }
+
+  /* ongoing project section */
+  .projects-parent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* blog section */
+
+  .blog-parent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* event section */
+  .events h2{
+    padding:0;
+  }
+  .events-grid{
+    flex-direction: column;
+    align-items: center;
+  }
+  .event-content h3{
+    font-size: 27px;
+  }
+
+  /* video section */
+  .video-grid {
+    align-items: center;
+    flex-direction: column;
     gap: 30px;
   }
+
+  /* gallery section */
+  .gallery-grid {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+
+  .gallery-item img {
+    height: 230px;
+  }
+
+  /* offices section */
+  .offices-row {
+    flex-direction: column;
+  }
+
+  /* footer logo */
+  .footer-logo .logo-section{
+    gap: 10px;
+  }
+  .footer-logo{
+    width:100%;
+  }
+  .footer-columns{
+    width:100%;
+    position: relative;
+  }
+
+  .footer-columns .footer-column-parent{
+    gap: 35px;
+    flex-direction: column;
+  }
+
+  .footer-space {
+    position: absolute;
+    bottom: 94px;
+    right: 50px;
+  }
+
+  .contact-item {
+  margin-bottom: 10px;
+}
 
   .funds-grid,
   .projects-parent,
   .blog-parent,
   .events-grid,
-  .video-grid {
+  .video-grid ,
+  .gallery-grid{
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
 
   .offices-grid {
     grid-template-columns: 1fr;
@@ -529,22 +676,119 @@ padding: 10px 20px 40px 20px;
   }
 }
 
+@media (min-width: 629px) and (max-width: 767px) {
+  .hero-slider {
+    height: 276px;
+  }
+}
+
 /* small mobile */
 @media (max-width: 480px) {
   .container {
-    padding: 0 20px;
+    padding: 0;
   }
 
   /* header */
-  .logo{
-    width:30px;
-    height:40px;
+  .logo {
+    width: 30px;
+    height: 40px;
   }
 
+  .top-bar-content {
+    padding: 0 10px;
+  }
+
+  /* navigation section */
+   .navigation .logo-section .logo-parent .foundation-names p {
+    font-size: 13px;
+  }
+
+  /* hero section */
 
   .hero {
     padding: 20px 20px;
   }
+
+  .hero-slider {
+    height: 150px;
+  }
+
+  .hero-btn {
+    font-size: 17px;
+    padding: 2px 10px;
+  }
+
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+
+  /* Pagination */
+  .hero-dots {
+    bottom: 5px;
+  }
+
+  .hero-dots span {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* donation form section */
+  .donation-note {
+    font-size: 14px;
+  }
+
+  /* donation funds */
+  .donation-funds h2 {
+    font-size: 16px;
+  }
+  .fund-card {
+    margin: 0 40px;
+  }
+
+  /* events section */
+  .events-grid{
+    gap:50px;
+  }
+
+  /* video section */
+  .video{
+    padding: 20px 20px;
+  }
+
+  .video-grid{
+    gap: 40px;
+  }
+
+  /* gallery section */
+  .gallery-item img {
+    height: 190px;
+  }
+
+  /* footer section */
+    .footer-space {
+    right: 16px;
+  }
+
+  .footer-column li a{
+    font-size: 13px;
+  }
+
+  .footer-bottom p{
+    font-size: 13px;
+  }
+
+  .chat-button{
+    padding: 3px 10px;
+    font-size: 14px;
+    position: fixed;
+    bottom:32px;
+    right:10px;
+  }
+
+
 
   .about {
     padding: 20px 20px;
@@ -555,14 +799,12 @@ padding: 10px 20px 40px 20px;
   }
 
   .global-presence {
-    padding: 20px 20px 30px;
+    padding: 20px 5px 30px;
   }
 
   .funds-grid,
   .projects-parent,
-  .blog-parent,
-  .events-grid,
-  .video-grid {
+  .blog-parent {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -571,8 +813,4 @@ padding: 10px 20px 40px 20px;
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
-
-
-
 }
