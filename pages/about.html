@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -192,11 +192,10 @@
           <li class="nav-item">
             <a href="./volunteer.html">Volunteer Registration</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="./blog.html">Blog</a>
-            <div class="nav-indicator"></div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a href="./about.html" class="dropdown-toggle">
               About
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
@@ -209,6 +208,7 @@
                 />
               </svg>
             </a>
+            <div class="nav-indicator"></div>
 
             <ul class="dropdown-menu">
               <li><a href="#mission">Our Mission</a></li>
@@ -231,78 +231,92 @@
       <p class="title-name">About</p>
     </div>
 
-    
-<section class="about-section">
-  <div class="about-wrapper">
+    <section class="about-section">
+      <div class="about-wrapper">
+        <!-- Left / Top Menu -->
+        <div class="about-menu">
+          <button class="active" data-tab="mission">Our Mission</button>
+          <button data-tab="legal">Legal Documents</button>
+          <button data-tab="governing">Governing Body</button>
+          <button data-tab="shariah">Shariah Advisory Board</button>
+          <button data-tab="awards">Awards</button>
+          <button data-tab="volunteers">Volunteers</button>
+          <button data-tab="achievements">Achievements</button>
+        </div>
 
-    <!-- Left / Top Menu -->
-    <div class="about-menu">
-      <button class="active" data-tab="mission">Our Mission</button>
-      <button data-tab="legal">Legal Documents</button>
-      <button data-tab="governing">Governing Body</button>
-      <button data-tab="shariah">Shariah Advisory Board</button>
-      <button data-tab="awards">Awards</button>
-      <button data-tab="volunteers">Volunteers</button>
-      <button data-tab="achievements">Achievements</button>
-    </div>
+        <!-- Right Content -->
+        <div class="about-content">
+          <div class="tab-content active" id="mission">
+            <h2>Alhaj Shamsul Hoque Foundation (ASHF)</h2>
+            <p>
+              Alhaj Shamsul Hoque Foundation (ASHF) is a non-profit charity and
+              government approved NGO (Reg No: 3201, RJSC Reg No: CHS-620/2018,
+              DNC Reg: 01/2021-22) in Bangladesh. It has the Special
+              Consultative Status with the United Nations Economic and Social
+              Council (ECOSOC). ASHF has been serving the poor, distressed and
+              needy people in all districts of Bangladesh including Chattogram,
+              Cox's Bazar, Kurigram, Sunamganj and Satkhira since 2018.
+              Actually, the Foundation works as a bridge between the help
+              seekers and the providers. So far it has contributed a lot of
+              humanitarian assistances especially food, shelter, education, WASH
+              and emergency responses for FDMNs (Rohingya people in Cox’s Bazar
+              and Bhasan Char). Moreover, ASHF implements innovative ideas to
+              build a smart society. The vision of the Foundation is to make a
+              hunger and poverty free healthy society and to ensure the peace
+              and prosperity for all regardless of race, religion, caste and
+              gender.
+            </p>
+          </div>
 
-    <!-- Right Content -->
-    <div class="about-content">
+          <div class="tab-content" id="legal">
+            <h2>Legal Documents</h2>
+            <p>
+              ASHF is registered under NGO Affairs Bureau and complies with all
+              legal and regulatory requirements.
+            </p>
+          </div>
 
-      <div class="tab-content active" id="mission">
-        <h2>Alhaj Shamsul Hoque Foundation (ASHF)</h2>
-        <p>Alhaj Shamsul Hoque Foundation (ASHF) is a non-profit charity and government approved NGO (Reg No: 3201, RJSC Reg No: CHS-620/2018, DNC Reg: 01/2021-22) in Bangladesh. It has the Special Consultative Status with the United Nations Economic and Social Council (ECOSOC). ASHF has been serving the poor, distressed and needy people in all districts of Bangladesh including Chattogram, Cox's Bazar, Kurigram, Sunamganj and Satkhira since 2018. Actually, the Foundation works as a bridge between the help seekers and the providers. So far it has contributed a lot of humanitarian assistances especially food, shelter, education, WASH and emergency responses for FDMNs (Rohingya people in Cox’s Bazar and Bhasan Char). Moreover, ASHF implements innovative ideas to build a smart society. The vision of the Foundation is to make a hunger and poverty free healthy society and to ensure the peace and prosperity for all regardless of race, religion, caste and gender.</p>
+          <div class="tab-content" id="governing">
+            <h2>Governing Body</h2>
+            <p>
+              Our governing body consists of experienced professionals and
+              social leaders.
+            </p>
+          </div>
+
+          <div class="tab-content" id="shariah">
+            <h2>Shariah Advisory Board</h2>
+            <p>
+              The Shariah Board ensures all activities comply with Islamic
+              values.
+            </p>
+          </div>
+
+          <div class="tab-content" id="awards">
+            <h2>Awards</h2>
+            <p>
+              The foundation has received several awards for humanitarian work.
+            </p>
+          </div>
+
+          <div class="tab-content" id="volunteers">
+            <h2>Volunteers</h2>
+            <p>
+              Thousands of volunteers actively support ASHF programs nationwide.
+            </p>
+          </div>
+
+          <div class="tab-content" id="achievements">
+            <h2>Achievements</h2>
+            <p>
+              ASHF has successfully helped millions through relief and
+              development initiatives.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="tab-content" id="legal">
-        <h2>Legal Documents</h2>
-        <p>
-          ASHF is registered under NGO Affairs Bureau and complies with all
-          legal and regulatory requirements.
-        </p>
-      </div>
-
-      <div class="tab-content" id="governing">
-        <h2>Governing Body</h2>
-        <p>
-          Our governing body consists of experienced professionals and social
-          leaders.
-        </p>
-      </div>
-
-      <div class="tab-content" id="shariah">
-        <h2>Shariah Advisory Board</h2>
-        <p>
-          The Shariah Board ensures all activities comply with Islamic values.
-        </p>
-      </div>
-
-      <div class="tab-content" id="awards">
-        <h2>Awards</h2>
-        <p>
-          The foundation has received several awards for humanitarian work.
-        </p>
-      </div>
-
-      <div class="tab-content" id="volunteers">
-        <h2>Volunteers</h2>
-        <p>
-          Thousands of volunteers actively support ASHF programs nationwide.
-        </p>
-      </div>
-
-      <div class="tab-content" id="achievements">
-        <h2>Achievements</h2>
-        <p>
-          ASHF has successfully helped millions through relief and development
-          initiatives.
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-   <!-- Donation form -->
+      <!-- Donation form -->
       <div class="donation-form-container">
         <form class="donation-form">
           <div class="custom-select">
@@ -380,9 +394,7 @@
           <button class="btn-donate">Donate</button>
         </form>
       </div>
-</section>
-
-    
+    </section>
 
     <footer class="footer">
       <div class="footer-bottom">
@@ -394,24 +406,22 @@
     </footer>
     <script>
       const menuBtns = document.querySelectorAll(".about-menu button");
-  const contents = document.querySelectorAll(".tab-content");
+      const contents = document.querySelectorAll(".tab-content");
 
-  menuBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
+      menuBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // remove active from buttons
+          menuBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
 
-      // remove active from buttons
-      menuBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+          // hide all contents
+          contents.forEach((c) => c.classList.remove("active"));
 
-      // hide all contents
-      contents.forEach(c => c.classList.remove("active"));
-
-      // show selected content
-      const target = btn.getAttribute("data-tab");
-      document.getElementById(target).classList.add("active");
-    });
-  });
-
+          // show selected content
+          const target = btn.getAttribute("data-tab");
+          document.getElementById(target).classList.add("active");
+        });
+      });
     </script>
     <script src="/js/main.js"></script>
   </body>
