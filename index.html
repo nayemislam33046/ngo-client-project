@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alhaj Shamsul Haque Foundation - ASHF</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/effect.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
     <!-- favicon icon -->
     <link rel="icon" type="image/png" href="assets/logo.svg" />
     <link
@@ -36,13 +38,15 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
               </button>
-              <div class="logo">
-                <img src="assets/logo.svg" alt="ASH Foundation Logo" />
-              </div>
-              <div class="foundation-names">
-                <p class="foundation-name">ALHAJ SHAMSUL</p>
-                <p class="foundation-name">HOQUE FOUNDATION</p>
-              </div>
+              <a href="index.html">
+                <div class="logo">
+                  <img src="assets/logo.svg" alt="ASH Foundation Logo" />
+                </div>
+                <div class="foundation-names">
+                  <p class="foundation-name">ALHAJ SHAMSUL</p>
+                  <p class="foundation-name">HOQUE FOUNDATION</p>
+                </div>
+              </a>
             </div>
 
             <div class="header-right-column">
@@ -100,17 +104,19 @@
     <!-- Navigation Menu -->
     <nav class="navigation">
       <div class="container">
-        <div class="logo-section">
-          <div class="logo-parent">
-            <div class="logo">
-              <img src="assets/logo.svg" alt="ASH Foundation Logo" />
-            </div>
-            <div class="foundation-names navigation-names">
-              <p class="foundation-name">ALHAJ SHAMSUL</p>
-              <p class="foundation-name">HOQUE FOUNDATION</p>
+        <a href="index.html">
+          <div class="logo-section">
+            <div class="logo-parent">
+              <div class="logo">
+                <img src="assets/logo.svg" alt="ASH Foundation Logo" />
+              </div>
+              <div class="foundation-names navigation-names">
+                <p class="foundation-name">ALHAJ SHAMSUL</p>
+                <p class="foundation-name">HOQUE FOUNDATION</p>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
         <span class="menu-close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
@@ -133,20 +139,20 @@
 
         <ul class="nav-menu">
           <li class="nav-item active">
-            <a href="#home">Home</a>
+            <a href="/index.html">Home</a>
             <div class="nav-indicator"></div>
           </li>
           <li class="nav-item">
-            <a href="#projects">Projects</a>
+            <a href="pages/project.html">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#events">Event</a>
+            <a href="pages/event.html">Event</a>
           </li>
           <li class="nav-item">
-            <a href="#media">Media Coverage</a>
+            <a href="/pages/media.html">Media Coverage</a>
           </li>
           <li class="nav-item dropdown">
-            <a href="#initiatives"
+            <a href="pages/initiatives.html"
               >Our Initiatives
 
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
@@ -169,7 +175,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="#gallery"
+            <a href="pages/gallery.html"
               >Gallery
 
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
@@ -188,13 +194,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#volunteer">Volunteer Registration</a>
+            <a href="./pages/volunteer.html">Volunteer Registration</a>
           </li>
           <li class="nav-item">
-            <a href="#blog">Blog</a>
+            <a href="./pages/blog.html">Blog</a>
           </li>
           <li class="nav-item dropdown">
-            <a href="#about" class="dropdown-toggle">
+            <a href="./pages/about.html" class="dropdown-toggle">
               About
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
                 <path
@@ -218,7 +224,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#contact">Contact</a>
+            <a href="./pages/contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -227,110 +233,107 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-
         <div class="hero-parent">
-          
-        <div class="hero-content">
-          <div class="donation-form-container">
-            <form class="donation-form">
-              <!-- Donation Fund -->
+          <div class="hero-content">
+            <div class="donation-form-container">
+              <form class="donation-form">
+                <!-- Donation Fund -->
 
-              <div class="custom-select">
-                <div class="select-trigger">
-                  <span>Donation Fund</span>
-                  <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
-                    <path
-                      d="M1 1L7 6L13 1"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                <div class="custom-select">
+                  <div class="select-trigger">
+                    <span>Donation Fund</span>
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+                      <path
+                        d="M1 1L7 6L13 1"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <ul class="select-options">
+                    <li data-value="Donation Fund">Donation Fund</li>
+                    <li data-value="General Fund">General Fund</li>
+                    <li data-value="Emergency Fund in Gaza">
+                      Emergency Fund in Gaza
+                    </li>
+                    <li data-value="Zakat">Zakat</li>
+                    <li data-value="Guest house">Guest house</li>
+                    <li data-value="Medical">Medical</li>
+                    <li data-value="Rehabilitation of New Muslims">
+                      Rehabilitation of New Muslims
+                    </li>
+                    <li data-value="Self-Reliance Project">
+                      Self-Reliance Project
+                    </li>
+                    <li data-value="Emergency Disaster">Emergency Disaster</li>
+                    <li data-value="Management">Management</li>
+                    <li data-value="Sacrifice">Sacrifice</li>
+                    <li data-value="Winter Clothes">Winter Clothes</li>
+                    <li data-value="Final Touches">Final Touches</li>
+                    <li data-value="Water Purification">Water Purification</li>
+                    <li data-value="Project">Project</li>
+                    <li data-value="Tubeway">Tubeway</li>
+                  </ul>
+
+                  <!-- real select for backend -->
+                  <select name="donation" class="donation-select" hidden>
+                    <option>Donation Fund</option>
+                    <option>General Fund</option>
+                    <option>Emergency Fund in Gaza</option>
+                    <option>Zakat</option>
+                    <option>Guest house</option>
+                    <option>Medical</option>
+                    <option>Rehabilitation of New Muslims</option>
+                    <option>Self-Reliance Project</option>
+                    <option>Emergency Disaster</option>
+                    <option>Management</option>
+                    <option>Sacrifice</option>
+                    <option>Winter Clothes</option>
+                    <option>Final Touches</option>
+                    <option>Water Purification</option>
+                    <option>Project</option>
+                    <option>Tubeway</option>
+                  </select>
                 </div>
 
-                <ul class="select-options">
-                  <li data-value="Donation Fund">Donation Fund</li>
-                  <li data-value="General Fund">General Fund</li>
-                  <li data-value="Emergency Fund in Gaza">
-                    Emergency Fund in Gaza
-                  </li>
-                  <li data-value="Zakat">Zakat</li>
-                  <li data-value="Guest house">Guest house</li>
-                  <li data-value="Medical">Medical</li>
-                  <li data-value="Rehabilitation of New Muslims">
-                    Rehabilitation of New Muslims
-                  </li>
-                  <li data-value="Self-Reliance Project">
-                    Self-Reliance Project
-                  </li>
-                  <li data-value="Emergency Disaster">Emergency Disaster</li>
-                  <li data-value="Management">Management</li>
-                  <li data-value="Sacrifice">Sacrifice</li>
-                  <li data-value="Winter Clothes">Winter Clothes</li>
-                  <li data-value="Final Touches">Final Touches</li>
-                  <li data-value="Water Purification">Water Purification</li>
-                  <li data-value="Project">Project</li>
-                  <li data-value="Tubeway">Tubeway</li>
-                </ul>
-
-                <!-- real select for backend -->
-                <select name="donation" class="donation-select" hidden>
-                  <option>Donation Fund</option>
-                  <option>General Fund</option>
-                  <option>Emergency Fund in Gaza</option>
-                  <option>Zakat</option>
-                  <option>Guest house</option>
-                  <option>Medical</option>
-                  <option>Rehabilitation of New Muslims</option>
-                  <option>Self-Reliance Project</option>
-                  <option>Emergency Disaster</option>
-                  <option>Management</option>
-                  <option>Sacrifice</option>
-                  <option>Winter Clothes</option>
-                  <option>Final Touches</option>
-                  <option>Water Purification</option>
-                  <option>Project</option>
-                  <option>Tubeway</option>
-                </select>
-              </div>
-
-              <!-- Phone / Email -->
-              <div class="form-field">
-                <div class="form-field-items">
-                  <input type="text" placeholder="Phone / Email" />
-                  <button>ⓘ</button>
+                <!-- Phone / Email -->
+                <div class="form-field">
+                  <div class="form-field-items">
+                    <input type="text" placeholder="Phone / Email" />
+                    <button>ⓘ</button>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Donation Amount -->
-              <div class="form-field form-field-items">
-                <input type="text" placeholder="Donation Amount" />
-              </div>
+                <!-- Donation Amount -->
+                <div class="form-field form-field-items">
+                  <input type="text" placeholder="Donation Amount" />
+                </div>
 
-              <!-- Donate Button -->
-              <button class="btn-donate">Donate</button>
-            </form>
+                <!-- Donate Button -->
+                <button class="btn-donate">Donate</button>
+              </form>
 
-            <p class="donation-note">
-              <span>Alhaj Shamsul Hoque Foundation (ASHF) . </span><a href="#"
-                >Click here for details.</a
-              >
-            </p>
-          </div>
-        </div>
-
-        <div class="hero-slider">
-          <div class="hero-track">
-            <div class="hero-slide"><img src="assets/hero-image1.png" /></div>
-            <div class="hero-slide"><img src="assets/hero-image2.png" /></div>
-            <div class="hero-slide"><img src="assets/hero-image3.jpg" /></div>
+              <p class="donation-note">
+                <span>Alhaj Shamsul Hoque Foundation (ASHF) . </span
+                ><a href="#">Click here for details.</a>
+              </p>
+            </div>
           </div>
 
-          <button class="hero-btn prev">❮</button>
-          <button class="hero-btn next">❯</button>
-          <div class="hero-dots"></div>
-        </div>
+          <div class="hero-slider">
+            <div class="hero-track">
+              <div class="hero-slide"><img src="assets/hero-image1.png" /></div>
+              <div class="hero-slide"><img src="assets/hero-image2.png" /></div>
+              <div class="hero-slide"><img src="assets/hero-image3.jpg" /></div>
+            </div>
+
+            <button class="hero-btn prev">❮</button>
+            <button class="hero-btn next">❯</button>
+            <div class="hero-dots"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -636,7 +639,15 @@
               src="https://www.youtube.com/embed/iYqnQBANlpw?si=pr4j2__JtBMk7iIv"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
@@ -648,7 +659,15 @@
               src="https://www.youtube.com/embed/yFHB_AYqAQc?si=vc3ZkcvNPsVSjOsI"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
@@ -660,7 +679,15 @@
               src="https://www.youtube.com/embed/cRh-kbwstcA?si=cwsYTgKKafNWNoe6"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
@@ -799,13 +826,15 @@
         <div class="footer-main">
           <div class="footer-logo">
             <div class="logo-section">
-              <div class="logo">
-                <img src="assets/logo.svg" alt="ASH Foundation Logo" />
-              </div>
-              <div class="footer-foundation-names">
-                <p class="footer-foundation-name">ALHAJ SHAMSUL</p>
-                <p class="footer-foundation-name">HOQUE FOUNDATION</p>
-              </div>
+              <a href="index.html">
+                <div class="logo">
+                  <img src="assets/logo.svg" alt="ASH Foundation Logo" />
+                </div>
+                <div class="footer-foundation-names">
+                  <p class="footer-foundation-name">ALHAJ SHAMSUL</p>
+                  <p class="footer-foundation-name">HOQUE FOUNDATION</p>
+                </div>
+              </a>
             </div>
             <p>
               This foundation is registered with the NGO Bureau under the Prime
@@ -940,6 +969,7 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

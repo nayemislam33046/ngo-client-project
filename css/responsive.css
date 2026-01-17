@@ -674,6 +674,18 @@
     flex-direction: column;
     gap: 30px;
   }
+
+  .motion {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+
+  /* Project Page */
+  
+  .project-option-parent{
+    justify-content: center;
+  }
 }
 
 @media (min-width: 629px) and (max-width: 767px) {

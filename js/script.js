@@ -1,27 +1,3 @@
-document.getElementById("getfullyear").textContent = new Date().getFullYear();
-
-//motion effects
-window.addEventListener("load", () => {
-  document.querySelector(".motion-nav").classList.add("show");
-});
-
-const motions = document.querySelectorAll(".motion");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  {
-    threshold: 0.2,
-  }
-);
-
-motions.forEach((el) => observer.observe(el));
-
 // custom select dropdown
 const customSelect = document.querySelector(".custom-select");
 const trigger = customSelect.querySelector(".select-trigger");
@@ -44,36 +20,6 @@ document.addEventListener("click", (e) => {
   if (!customSelect.contains(e.target)) {
     customSelect.classList.remove("open");
   }
-});
-
-// navigation 
-
-const menuBtn = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".navigation");
-const overlay = document.querySelector(".menu-overlay");
-const menuClose = document.querySelector(".menu-close");
-
-function openMenu(){
-  nav.classList.add("active");
-  overlay.classList.add("active");
-  document.body.classList.add("menu-open");
-}
-
-function closeMenu(){
-  nav.classList.remove("active");
-  overlay.classList.remove("active");
-  document.body.classList.remove("menu-open");
-}
-
-menuBtn.addEventListener("click", openMenu);
-overlay.addEventListener("click", closeMenu);
-menuClose.addEventListener("click", closeMenu);
-
-/* Dropdown toggle for tablet */
-document.querySelectorAll(".nav-item.dropdown").forEach(item=>{
-  item.addEventListener("click", ()=>{
-    item.classList.toggle("active");
-  });
 });
 
 // hero slider
@@ -168,7 +114,7 @@ slider.addEventListener("touchend", e=>{
 
 /* autoplay */
 function startAuto(){
-  if(auto) return;              // already running
+  if(auto) return;
   auto = setInterval(()=>{
     safeGo(index+1);
   },3000);
@@ -176,7 +122,7 @@ function startAuto(){
 
 function stopAuto(){
   clearInterval(auto);
-  auto = null;                  // important
+  auto = null;
 }
 
 function resetAuto(){

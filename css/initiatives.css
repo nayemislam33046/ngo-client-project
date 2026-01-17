@@ -1,0 +1,187 @@
+.title-name {
+  font-size: 35px;
+  font-family: Pridi;
+  color: #ffffff;
+}
+.title-box {
+  background-color: #3d82cf;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.initiatives {
+  padding: 60px 10px;
+}
+
+.initiatives-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.initiatives-details {
+  width: 700px;
+}
+
+.related-initiatives {
+  width: 400px;
+  height: 500px;
+}
+
+.initiatives-details img {
+  width: 100%;
+  height: 366px;
+  border-radius: 10px;
+}
+
+.initiatives-title {
+  font-family: Pridi;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 20px;
+}
+
+.initiatives-description {
+  font-family: Pridi;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.visit-btn {
+  padding: 10px;
+  width: 166px;
+  background-color: #3d82cf;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-family: Pridi;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+
+.related-initiatives-card .image-box img{
+  width: 150px;
+  height: 105px;
+}
+
+.related-title{
+  font-size: 24px;
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 3px solid gray;
+}
+
+.related-initiatives-card{
+ display: flex;
+ gap: 10px;
+ justify-content: center;
+ align-items: start;
+ margin-top: 20px;
+}
+
+.content-title{
+  font-family: Pridi;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+
+.content-date{
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 14.4px;  
+}
+
+.select-options {
+  transform: translateY(-100%);
+}
+
+.custom-select.open .select-options {
+  transform: translateY(-123%);
+}
+
+@media (max-width: 1023px) {
+  .initiatives-parent {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+  }
+
+   .initiatives-details {
+  width: auto;
+}
+
+.related-initiatives {
+  width: auto;
+  height: auto;
+}
+
+.initiatives-details img {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.content-date{
+  padding-top: 20px;
+}
+}
+
+
+@media (max-width:767px){
+  
+.initiatives-details img {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.related-initiatives-card .image-box img{
+  width: auto;
+  height: 100px;
+}
+
+.content-title{
+  font-size: 18px;
+}
+
+.related-initiatives-card{
+ display: flex;
+ gap: 10px;
+ justify-content: center;
+ align-items: start;
+ margin-top: 20px;
+}
+
+
+.content-date{
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 14.4px;
+  padding-top: 10px;
+}
+}
+
+@media (max-width:480px){
+  .initiatives-details img {
+  height: 300px;
+}
+}
