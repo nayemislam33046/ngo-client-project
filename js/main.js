@@ -45,34 +45,85 @@ menuBtn.addEventListener("click", openMenu);
 overlay.addEventListener("click", closeMenu);
 menuClose.addEventListener("click", closeMenu);
 
-/* Dropdown toggle for tablet */
-document.querySelectorAll(".nav-item.dropdown").forEach(item=>{
-  item.addEventListener("click", ()=>{
-    item.classList.toggle("active");
+const dropdowns = document.querySelectorAll(".nav-item.dropdown");
+
+dropdowns.forEach(dropdown => {
+  const trigger = dropdown.querySelector("a");
+
+  trigger.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation(); // 🔥 very important
+
+    // অন্য dropdown বন্ধ
+    dropdowns.forEach(d => {
+      if (d !== dropdown) d.classList.remove("active");
+    });
+
+    dropdown.classList.toggle("active");
   });
 });
+
+// 🔥 outside click
+document.addEventListener("click", () => {
+  dropdowns.forEach(dropdown => {
+    dropdown.classList.remove("active");
+  });
+});
+
 
 
 // custom select dropdown
-const customSelect = document.querySelector(".custom-select");
-const trigger = customSelect.querySelector(".select-trigger");
-const option = customSelect.querySelectorAll(".select-options li");
-const realSelects = customSelect.querySelector("select");
+document.addEventListener("DOMContentLoaded", () => {
 
-trigger.addEventListener("click", () => {
-  customSelect.classList.toggle("open");
-});
+  const customSelects = document.querySelectorAll(".custom-select");
+  if (!customSelects.length) return;
 
-option.forEach((option) => {
-  option.addEventListener("click", () => {
-    trigger.querySelector("span").textContent = option.textContent;
-    realSelects.value = option.dataset.value;
-    customSelect.classList.remove("open");
+  customSelects.forEach(customSelect => {
+
+    const trigger = customSelect.querySelector(".select-trigger");
+    const triggerText = trigger.querySelector("span");
+    const options = customSelect.querySelectorAll(".select-options li");
+    const realSelect = customSelect.querySelector("select");
+
+    if (!trigger || !realSelect || !options.length) return;
+
+    // open / close
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      // close others
+      customSelects.forEach(cs => {
+        if (cs !== customSelect) cs.classList.remove("open");
+      });
+
+      customSelect.classList.toggle("open");
+    });
+
+    // option click
+    options.forEach(option => {
+      option.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const value = option.dataset.value;
+
+        // set UI text
+        triggerText.textContent = value;
+
+        // set real select value
+        realSelect.value = value;
+
+        customSelect.classList.remove("open");
+      });
+    });
+
   });
+
+  // click outside
+  document.addEventListener("click", () => {
+    document
+      .querySelectorAll(".custom-select.open")
+      .forEach(cs => cs.classList.remove("open"));
+  });
+
 });
 
-document.addEventListener("click", (e) => {
-  if (!customSelect.contains(e.target)) {
-    customSelect.classList.remove("open");
-  }
-});

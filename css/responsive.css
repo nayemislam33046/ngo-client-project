@@ -7,7 +7,7 @@
 
   .btn-primary,
   .btn-secondary {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .btn-primary {
@@ -591,14 +591,14 @@
   }
 
   /* event section */
-  .events h2{
-    padding:0;
+  .events h2 {
+    padding: 0;
   }
-  .events-grid{
+  .events-grid {
     flex-direction: column;
     align-items: center;
   }
-  .event-content h3{
+  .event-content h3 {
     font-size: 27px;
   }
 
@@ -624,18 +624,18 @@
   }
 
   /* footer logo */
-  .footer-logo .logo-section{
+  .footer-logo .logo-section {
     gap: 10px;
   }
-  .footer-logo{
-    width:100%;
+  .footer-logo {
+    width: 100%;
   }
-  .footer-columns{
-    width:100%;
+  .footer-columns {
+    width: 100%;
     position: relative;
   }
 
-  .footer-columns .footer-column-parent{
+  .footer-columns .footer-column-parent {
     gap: 35px;
     flex-direction: column;
   }
@@ -647,18 +647,17 @@
   }
 
   .contact-item {
-  margin-bottom: 10px;
-}
+    margin-bottom: 10px;
+  }
 
   .funds-grid,
   .projects-parent,
   .blog-parent,
   .events-grid,
-  .video-grid ,
-  .gallery-grid{
+  .video-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
-
 
   .offices-grid {
     grid-template-columns: 1fr;
@@ -680,10 +679,9 @@
     transform: none !important;
   }
 
-
   /* Project Page */
-  
-  .project-option-parent{
+
+  .project-option-parent {
     justify-content: center;
   }
 }
@@ -710,8 +708,18 @@
     padding: 0 10px;
   }
 
+  .btn-primary,
+  .btn-secondary {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .action-buttons {
+    transform: scale(0.9);
+  }
+
   /* navigation section */
-   .navigation .logo-section .logo-parent .foundation-names p {
+  .navigation .logo-section .logo-parent .foundation-names p {
     font-size: 13px;
   }
 
@@ -761,17 +769,21 @@
   }
 
   /* events section */
-  .events-grid{
-    gap:50px;
+  .events-grid {
+    gap: 50px;
   }
 
   /* video section */
-  .video{
-    padding: 20px 20px;
+  .video {
+    padding: 20px 10px;
   }
 
-  .video-grid{
+  .video-grid {
     gap: 40px;
+  }
+
+  .btn-more{
+    width:290px;
   }
 
   /* gallery section */
@@ -780,27 +792,25 @@
   }
 
   /* footer section */
-    .footer-space {
+  .footer-space {
     right: 16px;
   }
 
-  .footer-column li a{
+  .footer-column li a {
     font-size: 13px;
   }
 
-  .footer-bottom p{
+  .footer-bottom p {
     font-size: 13px;
   }
 
-  .chat-button{
+  .chat-button {
     padding: 3px 10px;
     font-size: 14px;
     position: fixed;
-    bottom:32px;
-    right:10px;
+    bottom: 32px;
+    right: 10px;
   }
-
-
 
   .about {
     padding: 20px 20px;

@@ -162,12 +162,28 @@
               </svg>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#donation-funds">helpnhelper</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
+              <li>
+                <a href="/pages/initiatives.html#zakat">Zakat Programs</a>
+              </li>
+              <li><a href="/pages/initiatives.html#sadaqah">Sadaqah</a></li>
+              <li>
+                <a href="/pages/initiatives.html#food-distribution"
+                  >Food Distribution</a
+                >
+              </li>
+              <li>
+                <a href="/pages/initiatives.html#orphan-support"
+                  >Orphan Support</a
+                >
+              </li>
+              <li>
+                <a href="/pages/initiatives.html#winter-aid">Winter Aid</a>
+              </li>
+              <li>
+                <a href="/pages/initiatives.html#water-projects"
+                  >Water Projects</a
+                >
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -185,8 +201,16 @@
               </svg>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#video-gallery">Video</a></li>
-              <li><a href="#photo-gallery">Photo</a></li>
+              <li>
+                <a href="/pages/gallery.html#video" class="gallery-link">
+                  Video
+                </a>
+              </li>
+              <li>
+                <a href="/pages/gallery.html#photo" class="gallery-link">
+                  Photo
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -211,12 +235,14 @@
             <div class="nav-indicator"></div>
 
             <ul class="dropdown-menu">
-              <li><a href="#mission">Our Mission</a></li>
-              <li><a href="#governing">Governing Body</a></li>
-              <li><a href="#shariah">Shariah Advisory Board</a></li>
-              <li><a href="#legal">Legal Documents</a></li>
-              <li><a href="#awards">Awards</a></li>
-              <li><a href="#volunteers">Volunteers</a></li>
+              <li><a href="/pages/about.html#mission">Our Mission</a></li>
+              <li><a href="/pages/about.html#legal">Legal Documents</a></li>
+              <li><a href="/pages/about.html#governing">Governing Body</a></li>
+              <li>
+                <a href="/pages/about.html#shariah">Shariah Advisory Board</a>
+              </li>
+              <li><a href="/pages/about.html#awards">Awards</a></li>
+              <li><a href="/pages/about.html#volunteers">Volunteers</a></li>
             </ul>
           </li>
 
@@ -405,21 +431,37 @@
       </div>
     </footer>
     <script>
-      const menuBtns = document.querySelectorAll(".about-menu button");
-      const contents = document.querySelectorAll(".tab-content");
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtns = document.querySelectorAll(".about-menu button");
+        const contents = document.querySelectorAll(".tab-content");
 
-      menuBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          // remove active from buttons
-          menuBtns.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
+        function showTab(tab) {
+          // buttons
+          menuBtns.forEach((btn) => {
+            btn.classList.toggle("active", btn.dataset.tab === tab);
+          });
 
-          // hide all contents
-          contents.forEach((c) => c.classList.remove("active"));
+          // contents
+          contents.forEach((content) => {
+            content.classList.toggle("active", content.id === tab);
+          });
+        }
 
-          // show selected content
-          const target = btn.getAttribute("data-tab");
-          document.getElementById(target).classList.add("active");
+        // 🔥 URL hash check on load
+        const hash = window.location.hash.replace("#", "");
+        if (hash) {
+          showTab(hash);
+        } else {
+          showTab("mission"); // default
+        }
+
+        // 🔁 button click → update hash
+        menuBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const tab = btn.dataset.tab;
+            history.pushState(null, "", `#${tab}`);
+            showTab(tab);
+          });
         });
       });
     </script>

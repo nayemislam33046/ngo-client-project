@@ -37,13 +37,6 @@
   text-decoration: none;
 }
 
-.logo-section a:hover{
-  text-decoration: underline;
-}
-
-.navigation a:hover{
-  text-decoration: underline;
-}
 
 .logo {
   width: 55px;
@@ -301,11 +294,41 @@
 }
 
 /* Show on hover */
-.dropdown:hover .dropdown-menu {
+/* .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+} */
+
+/* default state */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+/* click করলে active হবে */
+.dropdown.active .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
+
+.dropdown-menu a:hover {
+  background: #f3f3f3;
+}
+
+/* arrow rotate */
+.dropdown svg {
+  transition: 0.3s ease;
+}
+
+.dropdown.active svg {
+  transform: rotate(180deg);
+  margin-bottom: 4px;
+}
+
 
 /* Items */
 .dropdown-menu li {
@@ -320,19 +343,19 @@
   font-size: 14px;
 }
 
-.dropdown-menu a:hover {
+/* .dropdown-menu a:hover {
   background: #f3f3f3;
-}
+} */
 
 /* Rotate arrow */
-.dropdown:hover svg {
+/* .dropdown:hover svg {
   transform: rotate(180deg);
   margin-bottom: 4px;
-}
+} */
 
-svg {
+/* svg {
   transition: 0.3s ease;
-}
+} */
 
 .nav-item a {
   color: white;

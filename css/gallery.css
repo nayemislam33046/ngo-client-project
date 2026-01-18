@@ -17,3 +17,14 @@
 .custom-select.open .select-options {
   transform: translateY(-123%);
 }
+
+
+.video,
+.gallery {
+  display: none;
+}
+
+.video.active,
+.gallery.active {
+  display: block;
+}

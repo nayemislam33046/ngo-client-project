@@ -22,6 +22,63 @@ document.addEventListener("click", (e) => {
   }
 });
 
+
+// custom select dropdown
+document.addEventListener("DOMContentLoaded", () => {
+
+  const customSelects = document.querySelectorAll(".custom-select");
+  if (!customSelects.length) return;
+
+  customSelects.forEach(customSelect => {
+
+    const trigger = customSelect.querySelector(".select-trigger");
+    const triggerText = trigger.querySelector("span");
+    const options = customSelect.querySelectorAll(".select-options li");
+    const realSelect = customSelect.querySelector("select");
+
+    if (!trigger || !realSelect || !options.length) return;
+
+    // open / close
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      // close others
+      customSelects.forEach(cs => {
+        if (cs !== customSelect) cs.classList.remove("open");
+      });
+
+      customSelect.classList.toggle("open");
+    });
+
+    // option click
+    options.forEach(option => {
+      option.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const value = option.dataset.value;
+
+        // set UI text
+        triggerText.textContent = value;
+
+        // set real select value
+        realSelect.value = value;
+
+        customSelect.classList.remove("open");
+      });
+    });
+
+  });
+
+  // click outside
+  document.addEventListener("click", () => {
+    document
+      .querySelectorAll(".custom-select.open")
+      .forEach(cs => cs.classList.remove("open"));
+  });
+
+});
+
+
 // hero slider
 
 const slider = document.querySelector(".hero-slider");

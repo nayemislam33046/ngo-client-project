@@ -162,16 +162,17 @@
               </svg>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#donation-funds">helpnhelper</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-              <li><a href="#ongoing-projects">Example</a></li>
-            </ul>
+  <li><a href="/pages/initiatives.html#donation-funds">Donation Funds</a></li>
+  <li><a href="/pages/initiatives.html#ongoing-projects">Ongoing Projects</a></li>
+  <li><a href="/pages/initiatives.html#emergency-relief">Emergency Relief</a></li>
+  <li><a href="/pages/initiatives.html#education-support">Education Support</a></li>
+  <li><a href="/pages/initiatives.html#medical-aid">Medical Aid</a></li>
+  <li><a href="/pages/initiatives.html#community-development">Community Development</a></li>
+</ul>
+
           </li>
           <li class="nav-item dropdown active">
-            <a href="./gallery.html"
+            <a href="#"
               >Gallery
 
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
@@ -185,10 +186,19 @@
               </svg>
             </a>
             <div class="nav-indicator"></div>
-            <ul class="dropdown-menu">
-              <li><a href="#video-gallery">Video</a></li>
-              <li><a href="#photo-gallery">Photo</a></li>
-            </ul>
+           <ul class="dropdown-menu">
+  <li>
+    <a href="/pages/gallery.html#video" class="gallery-link">
+      Video
+    </a>
+  </li>
+  <li>
+    <a href="/pages/gallery.html#photo" class="gallery-link">
+      Photo
+    </a>
+  </li>
+</ul>
+
           </li>
           <li class="nav-item">
             <a href="./volunteer.html">Volunteer Registration</a>
@@ -211,13 +221,13 @@
             </a>
 
             <ul class="dropdown-menu">
-              <li><a href="#mission">Our Mission</a></li>
-              <li><a href="#governing">Governing Body</a></li>
-              <li><a href="#shariah">Shariah Advisory Board</a></li>
-              <li><a href="#legal">Legal Documents</a></li>
-              <li><a href="#awards">Awards</a></li>
-              <li><a href="#volunteers">Volunteers</a></li>
-            </ul>
+  <li><a href="/pages/about.html#mission">Our Mission</a></li>
+  <li><a href="/pages/about.html#legal">Legal Documents</a></li>
+  <li><a href="/pages/about.html#governing">Governing Body</a></li>
+  <li><a href="/pages/about.html#shariah">Shariah Advisory Board</a></li>
+  <li><a href="/pages/about.html#awards">Awards</a></li>
+  <li><a href="/pages/about.html#volunteers">Volunteers</a></li>
+</ul>
           </li>
 
           <li class="nav-item">
@@ -233,7 +243,7 @@
 
   
      <!-- Video Section -->
-    <section class="video">
+    <section class="video" id="video-gallery">
       <div class="container">
         <h2>Video</h2>
         <div class="video-grid motion">
@@ -278,7 +288,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery">
+    <section class="gallery" id="photo-gallery">
       <div class="container">
         <h2>Photo</h2>
         <div class="gallery-grid motion">
@@ -405,6 +415,70 @@
         </p>
       </div>
     </footer>
+    <script>
+//       document.addEventListener("DOMContentLoaded", () => {
+//   const videoSection = document.querySelector(".video");
+//   const photoSection = document.querySelector(".gallery");
+//   const galleryLinks = document.querySelectorAll(".gallery-link");
+
+//   // default → video show
+//   videoSection.classList.add("active");
+
+//   galleryLinks.forEach(link => {
+//     link.addEventListener("click", e => {
+//       e.preventDefault();
+
+//       const target = link.dataset.target;
+
+//       videoSection.classList.remove("active");
+//       photoSection.classList.remove("active");
+
+//       if (target === "video") {
+//         videoSection.classList.add("active");
+//       } else if (target === "photo") {
+//         photoSection.classList.add("active");
+//       }
+//     });
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const videoSection = document.querySelector(".video");
+  const photoSection = document.querySelector(".gallery");
+
+  function showSection(type) {
+    videoSection.classList.remove("active");
+    photoSection.classList.remove("active");
+
+    if (type === "photo") {
+      photoSection.classList.add("active");
+    } else {
+      videoSection.classList.add("active"); // default
+    }
+  }
+
+  // 🔥 URL hash check
+  const hash = window.location.hash.replace("#", "");
+
+  if (hash === "photo") {
+    showSection("photo");
+  } else {
+    showSection("video");
+  }
+
+  // 🔁 same page toggle support
+  document.querySelectorAll(".gallery-link").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = link.getAttribute("href").split("#")[1];
+      history.pushState(null, "", `#${target}`);
+      showSection(target);
+    });
+  });
+});
+
+
+    </script>
     <script src="/js/main.js"></script>
   </body>
 </html>

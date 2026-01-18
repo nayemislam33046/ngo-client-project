@@ -188,7 +188,7 @@ body{
 
 @media (max-width:767px) {
   .media .media-box{
-    padding: 40px 0;
+    padding: 40px 10px;
 }
 
 .media .media-box .media-title{
