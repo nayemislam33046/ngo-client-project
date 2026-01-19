@@ -1,39 +1,38 @@
-body{
-    background-color: #F5F5F5;
+body {
+  background-color: #f5f5f5;
 }
-.title-name{
-    font-size: 35px;
-    font-family: Pridi;
-    color: #ffffff;
+.title-name {
+  font-size: 35px;
+  font-family: Pridi;
+  color: #ffffff;
 }
-.title-box{
-    background-color: #3D82CF;
-    padding: 10px 0;
-    text-align: center;
+.title-box {
+  background-color: #3d82cf;
+  padding: 10px 0;
+  text-align: center;
 }
-
-.media{
-    padding: 30px 10px;
-}
-
-.media .media-box{
-    background-color: #3D82CF;
-    border-radius: 10px;
-    padding: 60px 0;
+.media {
+  padding: 30px 10px;
 }
 
-.media .media-box .media-title{
-    font-size: 60px;
-    color: #ffffff;
-    font-family: Pridi;
-    text-align: center;
+.media .media-box {
+  background-color: #3d82cf;
+  border-radius: 10px;
+  padding: 60px 0;
 }
 
-.media .media-box .media-description{
-    font-size: 24px;
-    color: #ffffff;
-    font-family: Pridi;
-    text-align: center;
+.media .media-box .media-title {
+  font-size: 60px;
+  color: #ffffff;
+  font-family: Pridi;
+  text-align: center;
+}
+
+.media .media-box .media-description {
+  font-size: 24px;
+  color: #ffffff;
+  font-family: Pridi;
+  text-align: center;
 }
 
 /* input section */
@@ -100,32 +99,31 @@ body{
   line-height: 30px;
 }
 
-
-.media-category1{
-    font-family: Pridi;
-    color:#CA0700;
-    font-weight: 400;
-    font-size: 20px;
+.media-category1 {
+  font-family: Pridi;
+  color: #ca0700;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-.media-category2{
-    font-family: Pridi;
-    color:#00983F;
-    font-weight: 400;
-    font-size: 20px;
+.media-category2 {
+  font-family: Pridi;
+  color: #00983f;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-.media-category3{
-    font-family: Pridi;
-    color:#9234E9;
-    font-weight: 400;
-    font-size: 20px;
+.media-category3 {
+  font-family: Pridi;
+  color: #9234e9;
+  font-weight: 400;
+  font-size: 20px;
 }
-.media-category4{
-    font-family: Pridi;
-    color:#F4A00A;
-    font-weight: 400;
-    font-size: 20px;
+.media-category4 {
+  font-family: Pridi;
+  color: #f4a00a;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .media-report {
@@ -135,81 +133,78 @@ body{
   color: #707070;
   line-height: 20px;
 }
-
-.publish-date{
-    color: #707070;
-    padding: 10px 0;
-    font-size: 14px;
-    font-family: Pridi;
+.publish-date {
+  color: #707070;
+  padding: 10px 0;
+  font-size: 14px;
+  font-family: Pridi;
 }
-.publish-date span{
-    color: #000000;
-    font-weight: 500;
+.publish-date span {
+  color: #000000;
+  font-weight: 500;
 }
 
 .select-options {
-   transform: translateY(-100%);
- }
+  transform: translateY(-100%);
+}
 
 .custom-select.open .select-options {
   transform: translateY(-123%);
 }
 
-@media (min-width:1248px) {
-  .media-card-parent{
+@media (min-width: 1248px) {
+  .media-card-parent {
     display: grid;
     grid-template-columns: repeat(3, minmax(240px, 1fr));
     gap: 20px;
   }
-  .media-card{
+  .media-card {
     width: auto;
   }
   .media-content h3 {
-  font-size: 23px;
+    font-size: 23px;
+  }
 }
 
-}
-
-@media (min-width:1023px) and (max-width:1247px) {
-  .media-card-parent{
+@media (min-width: 1023px) and (max-width: 1247px) {
+  .media-card-parent {
     display: grid;
     grid-template-columns: repeat(3, minmax(240px, 1fr));
     gap: 30px;
   }
 
-  .media-card{
+  .media-card {
     width: 300px;
   }
 
   .media-content {
-  padding: 18px 10px;
-}
+    padding: 18px 10px;
+  }
 }
 
-@media (max-width:767px) {
-  .media .media-box{
+@media (max-width: 767px) {
+  .media .media-box {
     padding: 40px 10px;
-}
+  }
 
-.media .media-box .media-title{
+  .media .media-box .media-title {
     font-size: 40px;
-}
+  }
 
-.media .media-box .media-description{
+  .media .media-box .media-description {
     font-size: 16px;
-}
+  }
 
-.input-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 15px;
-  padding: 20px;
-  margin: 50px 10px;
-}
-
-.input-row input{
-  width: 100%;
-}
+  .input-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    margin: 50px 10px;
+  }
+  .input-row input {
+    width: 100%;
+  }
 }

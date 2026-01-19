@@ -1,23 +1,21 @@
-.title-name{
-    font-size: 35px;
-    font-family: Pridi;
-    color: #ffffff;
+.title-name {
+  font-size: 35px;
+  font-family: Pridi;
+  color: #ffffff;
 }
-.title-box{
-    background-color: #3D82CF;
-    padding: 10px 0;
-    text-align: center;
+.title-box {
+  background-color: #3d82cf;
+  padding: 10px 0;
+  text-align: center;
 }
-
 
 .select-options {
-   transform: translateY(-100%);
- }
+  transform: translateY(-100%);
+}
 
 .custom-select.open .select-options {
   transform: translateY(-123%);
 }
-
 
 .video,
 .gallery {

@@ -4,23 +4,19 @@
   opacity: 0;
   transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .motion-nav.show {
   transform: translateY(0);
   opacity: 1;
 }
-
 .motion {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .motion.show {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* Animation and Hover Effects */
 .btn-primary:hover,
@@ -59,13 +55,11 @@
   transition: transform 0.3s ease;
 }
 
-/* Loading States */
 .loading {
   opacity: 0.6;
   pointer-events: none;
 }
 
-/* Accessibility */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -78,14 +72,12 @@
   border: 0;
 }
 
-/* Focus States */
 button:focus,
 a:focus {
   outline: 2px solid #3d82cf;
   outline-offset: 2px;
 }
 
-/* Print Styles */
 @media print {
   .header,
   .footer,

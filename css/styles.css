@@ -3,26 +3,23 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Pridi", sans-serif;
-
 }
 
 button:focus,
 input:focus,
 textarea:focus,
 select:focus,
-a:focus{
+a:focus {
   outline: none;
   box-shadow: none;
 }
-
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
-a:focus-visible{
+a:focus-visible {
   outline: 2px solid transparent;
 }
-
 
 body {
   line-height: 1.6;
@@ -65,17 +62,15 @@ body {
   gap: 15px;
 }
 
-/* Common field style */
 .form-field {
   position: relative;
 }
 
-/* custom select styles */
+/* custom select */
 .custom-select {
   position: relative;
   font-size: 14px;
 }
-
 .select-trigger {
   display: flex;
   justify-content: space-between;
@@ -89,7 +84,6 @@ body {
   font-size: 18px;
   outline: none;
   background: #fff;
-  font-family: Pridi;
   font-weight: 400;
   letter-spacing: 0%;
   color: #363636;
@@ -191,7 +185,6 @@ body {
 }
 
 .form-field input::placeholder {
-  color: #9ca3af;
   font-size: 18px;
   outline: none;
   background: #fff;
@@ -208,7 +201,7 @@ body {
   background-position: right 14px center;
 }
 
-/* Icon inside Phone / Email */
+/*Info Icon Phone / Email */
 .form-field.icon::after {
   content: "i";
   position: absolute;
@@ -268,14 +261,12 @@ body {
   margin-top: 25px;
 }
 
-/* Track */
 .hero-track {
   display: flex;
   height: 100%;
   transition: 0.5s ease;
 }
 
-/* Each Slide */
 .hero-slide {
   min-width: 100%;
   height: 100%;
@@ -296,7 +287,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   font-size: 21px;
@@ -306,10 +297,13 @@ body {
   z-index: 10;
 }
 
-.prev { left: 15px; }
-.next { right: 15px; }
+.prev {
+  left: 15px;
+}
+.next {
+  right: 15px;
+}
 
-/* Pagination */
 .hero-dots {
   position: absolute;
   bottom: 15px;
@@ -330,7 +324,6 @@ body {
 .hero-dots .active {
   background: rgb(99, 89, 89);
 }
-
 
 /* About Section */
 .about {
@@ -881,7 +874,7 @@ body {
   flex-direction: column;
 }
 
-.offices-row{
+.offices-row {
   flex-direction: column;
 }
 

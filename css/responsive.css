@@ -20,7 +20,6 @@
   }
 
   /* nav */
-
   .nav-menu {
     gap: 18px;
   }
@@ -104,11 +103,9 @@
   }
 
   /* offices section */
-
   .office-card {
     width: 300px;
   }
-
   .office-card h3 {
     font-size: 24px;
   }
@@ -126,7 +123,6 @@
   .footer-column h4 {
     font-size: 17px;
   }
-
   .footer-logo p {
     font-size: 13px;
   }
@@ -139,31 +135,19 @@
 /* Tablet Design */
 @media (max-width: 1023px) {
   .container {
-    padding: 0 15px;
+    padding: 0 20px;
   }
-
-  .hero {
-    padding: 10px 20px 40px 20px;
-  }
-
-  .about {
-    padding: 40px 40px;
-  }
-
-  .gallery {
-    padding: 35px 40px;
-  }
-
-  .global-presence {
-    padding: 40px 40px 51px;
-  }
-
-  .menu-toggle {
+  /* .menu-toggle {
     display: block;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-  }
+    
+    } */
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+    }
   .menu-toggle span {
     display: block;
     width: 27px;
@@ -172,12 +156,6 @@
     background-color: black;
     border-radius: 2px;
   }
-
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-  }
-
   body.menu-open {
     overflow: hidden;
   }
@@ -198,6 +176,7 @@
     visibility: visible;
   }
 
+  /* navigation section */
   .navigation {
     position: fixed;
     top: 0;
@@ -206,7 +185,7 @@
     height: 130vh;
     background: #fff;
     z-index: 9999;
-    padding-top: 40px;
+    padding: 40px 0;
     transition: 0.35s ease;
     overflow-y: auto;
     display: block;
@@ -217,7 +196,6 @@
   .navigation hr {
     display: block;
   }
-
   .menu-close {
     position: absolute;
     top: 5px;
@@ -228,16 +206,13 @@
     cursor: pointer;
     color: #000000;
   }
-
   .navigation.active {
     left: 0;
   }
-
   .navigation .logo-section {
     padding-bottom: 20px;
     gap: 6px;
   }
-
   hr {
     background-color: #dee2e6;
     border: none;
@@ -248,52 +223,47 @@
     height: 3px;
     border-radius: 2px;
   }
-
   .navigation .logo-section .logo-parent {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
   }
-
   .navigation .logo-section .logo-parent .foundation-names p {
     font-size: 17px;
   }
-
   .logo img {
     transform: scale(1.4);
   }
-
   .nav-menu {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
     padding: 0 20px;
-  }
 
+    height: 500px ;
+    overflow-y: scroll;
+  }
   .nav-item {
     width: 100%;
     border-bottom: 1px solid #eee;
   }
-
   .nav-item a {
     color: #111;
     width: 100%;
     padding: 14px 0;
     justify-content: space-between;
   }
-
   .dropdown.active .dropdown-menu {
     display: block;
+    padding-bottom: 50px;
   }
-
   .dropdown-menu a {
     padding-left: 15px;
     font-size: 14px;
   }
 
   /* donation form */
-
   .donation-form {
     display: grid;
     grid-template-columns: repeat(2, minmax(268px, 1fr));
@@ -311,39 +281,34 @@
   .form-field select {
     width: 100%;
   }
-
   .form-field-items button {
     top: 6px;
   }
 
   /* hero slider */
+  .hero {
+    padding: 10px 20px 40px 20px;
+  }
   .hero-slider {
     height: 310px;
   }
 
   /* About Section */
-  .container {
-    padding: 0 0;
+  .about {
+    padding: 40px 40px;
   }
   .about-content {
     align-items: stretch;
     gap: 20px;
   }
-
   .about-image img {
     height: 100%;
   }
-
   .about-text h2 {
     width: 210px;
     line-height: 1.1;
     font-weight: 650;
     font-size: 22px;
-  }
-
-  /* donation fund section */
-  .container {
-    padding: 0 20px;
   }
 
   /* Ongoing Projects Section  */
@@ -363,6 +328,9 @@
   }
 
   /* gallery section */
+  .gallery {
+    padding: 35px 40px;
+  }
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 20px;
@@ -373,9 +341,8 @@
   }
 
   /* global presence section */
-
   .global-presence {
-    padding: 0;
+    padding: 40px 40px 51px;
   }
 
   /* office section */
@@ -422,7 +389,6 @@
   .footer-space {
     padding-bottom: 45px;
   }
-
   .footer-columns .footer-column-parent {
     padding-bottom: 25px;
   }
@@ -538,41 +504,34 @@
     grid-template-columns: repeat(1, minmax(268px, 1fr));
     gap: 15px;
   }
-
   .donation-note {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   .about-content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   .about-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   .about-text h2 {
     margin-bottom: 15px;
   }
-
   .separator {
     width: 80%;
   }
 
   /* donation fund */
-
   .donation-funds h2 {
     font-size: 18px;
   }
-
   .fund-card {
     margin: 0 80px;
   }
@@ -613,7 +572,6 @@
   .gallery-grid {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
-
   .gallery-item img {
     height: 230px;
   }
@@ -634,12 +592,10 @@
     width: 100%;
     position: relative;
   }
-
   .footer-columns .footer-column-parent {
     gap: 35px;
     flex-direction: column;
   }
-
   .footer-space {
     position: absolute;
     bottom: 94px;
@@ -658,7 +614,6 @@
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-
   .offices-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -673,16 +628,9 @@
     flex-direction: column;
     gap: 30px;
   }
-
   .motion {
     opacity: 1 !important;
     transform: none !important;
-  }
-
-  /* Project Page */
-
-  .project-option-parent {
-    justify-content: center;
   }
 }
 
@@ -697,28 +645,25 @@
   .container {
     padding: 0;
   }
-
   /* header */
   .logo {
     width: 30px;
     height: 40px;
   }
-
   .top-bar-content {
     padding: 0 10px;
   }
-
   .btn-primary,
   .btn-secondary {
     padding: 5px;
     font-size: 16px;
   }
-
   .action-buttons {
     transform: scale(0.9);
   }
 
   /* navigation section */
+  
   .navigation .logo-section .logo-parent .foundation-names p {
     font-size: 13px;
   }
@@ -768,6 +713,11 @@
     margin: 0 40px;
   }
 
+  /* About section */
+  .about {
+    padding: 20px 20px;
+  }
+
   /* events section */
   .events-grid {
     gap: 50px;
@@ -782,13 +732,21 @@
     gap: 40px;
   }
 
-  .btn-more{
-    width:290px;
+  .btn-more {
+    width: 290px;
   }
 
   /* gallery section */
+  .gallery {
+    padding: 20px 20px;
+  }
   .gallery-item img {
     height: 190px;
+  }
+
+  /* global presence */
+  .global-presence {
+    padding: 20px 5px 30px;
   }
 
   /* footer section */
@@ -810,18 +768,6 @@
     position: fixed;
     bottom: 32px;
     right: 10px;
-  }
-
-  .about {
-    padding: 20px 20px;
-  }
-
-  .gallery {
-    padding: 20px 20px;
-  }
-
-  .global-presence {
-    padding: 20px 5px 30px;
   }
 
   .funds-grid,

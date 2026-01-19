@@ -133,7 +133,6 @@
           </svg>
         </span>
         <hr />
-
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="../index.html">Home</a>
@@ -150,7 +149,6 @@
           <li class="nav-item dropdown">
             <a href="./initiatives.html"
               >Our Initiatives
-
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
                 <path
                   d="M1 1L7 6L13 1"
@@ -189,7 +187,6 @@
           <li class="nav-item dropdown">
             <a href="./gallery.html"
               >Gallery
-
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
                 <path
                   d="M1 1L7 6L13 1"
@@ -233,7 +230,6 @@
               </svg>
             </a>
             <div class="nav-indicator"></div>
-
             <ul class="dropdown-menu">
               <li><a href="/pages/about.html#mission">Our Mission</a></li>
               <li><a href="/pages/about.html#legal">Legal Documents</a></li>
@@ -245,7 +241,6 @@
               <li><a href="/pages/about.html#volunteers">Volunteers</a></li>
             </ul>
           </li>
-
           <li class="nav-item">
             <a href="./contact.html">Contact</a>
           </li>
@@ -257,9 +252,9 @@
       <p class="title-name">About</p>
     </div>
 
+    <!-- about section -->
     <section class="about-section">
       <div class="about-wrapper">
-        <!-- Left / Top Menu -->
         <div class="about-menu">
           <button class="active" data-tab="mission">Our Mission</button>
           <button data-tab="legal">Legal Documents</button>
@@ -270,7 +265,6 @@
           <button data-tab="achievements">Achievements</button>
         </div>
 
-        <!-- Right Content -->
         <div class="about-content">
           <div class="tab-content active" id="mission">
             <h2>Alhaj Shamsul Hoque Foundation (ASHF)</h2>
@@ -358,7 +352,6 @@
                 />
               </svg>
             </div>
-
             <ul class="select-options">
               <li data-value="Donation Fund">Donation Fund</li>
               <li data-value="General Fund">General Fund</li>
@@ -382,7 +375,6 @@
               <li data-value="Tubeway">Tubeway</li>
             </ul>
 
-            <!-- real select for backend -->
             <select name="donation" class="donation-select" hidden>
               <option>Donation Fund</option>
               <option>General Fund</option>
@@ -422,6 +414,7 @@
       </div>
     </section>
 
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="footer-bottom">
         <p>
@@ -436,26 +429,22 @@
         const contents = document.querySelectorAll(".tab-content");
 
         function showTab(tab) {
-          // buttons
           menuBtns.forEach((btn) => {
             btn.classList.toggle("active", btn.dataset.tab === tab);
           });
 
-          // contents
           contents.forEach((content) => {
             content.classList.toggle("active", content.id === tab);
           });
         }
 
-        // 🔥 URL hash check on load
         const hash = window.location.hash.replace("#", "");
         if (hash) {
           showTab(hash);
         } else {
-          showTab("mission"); // default
+          showTab("mission");
         }
 
-        // 🔁 button click → update hash
         menuBtns.forEach((btn) => {
           btn.addEventListener("click", () => {
             const tab = btn.dataset.tab;

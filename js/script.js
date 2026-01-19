@@ -1,84 +1,3 @@
-// custom select dropdown
-const customSelect = document.querySelector(".custom-select");
-const trigger = customSelect.querySelector(".select-trigger");
-const option = customSelect.querySelectorAll(".select-options li");
-const realSelects = customSelect.querySelector("select");
-
-trigger.addEventListener("click", () => {
-  customSelect.classList.toggle("open");
-});
-
-option.forEach((option) => {
-  option.addEventListener("click", () => {
-    trigger.querySelector("span").textContent = option.textContent;
-    realSelects.value = option.dataset.value;
-    customSelect.classList.remove("open");
-  });
-});
-
-document.addEventListener("click", (e) => {
-  if (!customSelect.contains(e.target)) {
-    customSelect.classList.remove("open");
-  }
-});
-
-
-// custom select dropdown
-document.addEventListener("DOMContentLoaded", () => {
-
-  const customSelects = document.querySelectorAll(".custom-select");
-  if (!customSelects.length) return;
-
-  customSelects.forEach(customSelect => {
-
-    const trigger = customSelect.querySelector(".select-trigger");
-    const triggerText = trigger.querySelector("span");
-    const options = customSelect.querySelectorAll(".select-options li");
-    const realSelect = customSelect.querySelector("select");
-
-    if (!trigger || !realSelect || !options.length) return;
-
-    // open / close
-    trigger.addEventListener("click", (e) => {
-      e.stopPropagation();
-
-      // close others
-      customSelects.forEach(cs => {
-        if (cs !== customSelect) cs.classList.remove("open");
-      });
-
-      customSelect.classList.toggle("open");
-    });
-
-    // option click
-    options.forEach(option => {
-      option.addEventListener("click", (e) => {
-        e.stopPropagation();
-
-        const value = option.dataset.value;
-
-        // set UI text
-        triggerText.textContent = value;
-
-        // set real select value
-        realSelect.value = value;
-
-        customSelect.classList.remove("open");
-      });
-    });
-
-  });
-
-  // click outside
-  document.addEventListener("click", () => {
-    document
-      .querySelectorAll(".custom-select.open")
-      .forEach(cs => cs.classList.remove("open"));
-  });
-
-});
-
-
 // hero slider
 
 const slider = document.querySelector(".hero-slider");
@@ -93,9 +12,8 @@ let startX = 0;
 let auto;
 let isMoving = false;
 
-/* clone */
 const first = slides[0].cloneNode(true);
-const last = slides[slides.length-1].cloneNode(true);
+const last = slides[slides.length - 1].cloneNode(true);
 track.appendChild(first);
 track.insertBefore(last, slides[0]);
 slides = Array.from(track.children);
@@ -103,22 +21,22 @@ slides = Array.from(track.children);
 track.style.transform = "translateX(-100%)";
 
 /* dots */
-for(let i=0;i<slides.length-2;i++){
+for (let i = 0; i < slides.length - 2; i++) {
   const dot = document.createElement("span");
-  dot.onclick = ()=>safeGo(i+1);
+  dot.onclick = () => safeGo(i + 1);
   dotsBox.appendChild(dot);
 }
 
-function updateDots(){
-  let real = index-1;
-  if(real < 0) real = dotsBox.children.length-1;
-  if(real >= dotsBox.children.length) real = 0;
-  [...dotsBox.children].forEach(d=>d.classList.remove("active"));
+function updateDots() {
+  let real = index - 1;
+  if (real < 0) real = dotsBox.children.length - 1;
+  if (real >= dotsBox.children.length) real = 0;
+  [...dotsBox.children].forEach((d) => d.classList.remove("active"));
   dotsBox.children[real].classList.add("active");
 }
 
-function safeGo(i){
-  if(isMoving) return;
+function safeGo(i) {
+  if (isMoving) return;
   isMoving = true;
   index = i;
   track.style.transition = "0.5s ease";
@@ -127,62 +45,68 @@ function safeGo(i){
 }
 
 /* infinite */
-track.addEventListener("transitionend", ()=>{
-  if(index === 0){
+track.addEventListener("transitionend", () => {
+  if (index === 0) {
     track.style.transition = "none";
-    index = slides.length-2;
-    track.style.transform = `translateX(-${index*100}%)`;
+    index = slides.length - 2;
+    track.style.transform = `translateX(-${index * 100}%)`;
   }
-  if(index === slides.length-1){
+  if (index === slides.length - 1) {
     track.style.transition = "none";
     index = 1;
-    track.style.transform = `translateX(-${index*100}%)`;
+    track.style.transform = `translateX(-${index * 100}%)`;
   }
   isMoving = false;
 });
 
 /* buttons */
-next.onclick = ()=>{ safeGo(index+1); resetAuto(); }
-prev.onclick = ()=>{ safeGo(index-1); resetAuto(); }
+next.onclick = () => {
+  safeGo(index + 1);
+  resetAuto();
+};
+prev.onclick = () => {
+  safeGo(index - 1);
+  resetAuto();
+};
 
 /* drag */
-slider.addEventListener("mousedown", e=>{
+slider.addEventListener("mousedown", (e) => {
   startX = e.clientX;
   stopAuto();
 });
-slider.addEventListener("mouseup", e=>{
+slider.addEventListener("mouseup", (e) => {
   let endX = e.clientX;
-  if(startX - endX > 50) next.click();
-  if(endX - startX > 50) prev.click();
+  if (startX - endX > 50) next.click();
+  if (endX - startX > 50) prev.click();
   startAuto();
 });
 
 /* touch */
-slider.addEventListener("touchstart", e=>{
+slider.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
   stopAuto();
 });
-slider.addEventListener("touchend", e=>{
+slider.addEventListener("touchend", (e) => {
   let endX = e.changedTouches[0].clientX;
-  if(startX - endX > 50) next.click();
-  if(endX - startX > 50) prev.click();
+  if (startX - endX > 50) next.click();
+  if (endX - startX > 50) prev.click();
   startAuto();
 });
 
 /* autoplay */
-function startAuto(){
-  if(auto) return;
-  auto = setInterval(()=>{
-    safeGo(index+1);
-  },3000);
+function startAuto() {
+  if (auto) return;
+  auto = setInterval(() => {
+    safeGo(index + 1);
+  }, 3000);
 }
 
-function stopAuto(){
+function stopAuto() {
   clearInterval(auto);
   auto = null;
 }
 
-function resetAuto(){
+function resetAuto() {
   stopAuto();
   startAuto();
 }
