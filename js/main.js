@@ -95,3 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach((cs) => cs.classList.remove("open"));
   });
 });
+
+
+// language selector
+  const languageSelector = document.querySelector(".language-selector");
+  const toggle = languageSelector.querySelector(".language-toggle");
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    languageSelector.classList.toggle("active");
+  });
+
+  // click outside to close
+  document.addEventListener("click", () => {
+    languageSelector.classList.remove("active");
+  });

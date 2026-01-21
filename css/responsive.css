@@ -102,7 +102,7 @@
     gap: 10px;
   }
 
-  /* offices section */
+  offices section
   .office-card {
     width: 300px;
   }
@@ -671,7 +671,7 @@
   /* hero section */
 
   .hero {
-    padding: 20px 20px;
+    padding: 10px 20px 20px 20px;
   }
 
   .hero-slider {

@@ -36,6 +36,7 @@ body {
 /* Hero Section */
 .hero {
   background-color: #f5f5f5;
+  padding:25px 0;
 }
 
 .hero-content {
@@ -878,23 +879,35 @@ body {
   flex-direction: column;
 }
 
-.office-group {
+/* .office-group {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+} */
+
+.office-group{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  height: 200px;
+  margin-bottom: 20px;
 }
 
 .office-card {
   text-align: center;
   width: 368px;
+  background: white;
+  height: 100%;
+  padding: 10px;
 }
 
 .office-card h3 {
   font-size: 28px;
   font-weight: 400;
   color: #093471;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   line-height: 1.2;
 }
 
@@ -907,7 +920,6 @@ body {
 
 .registered-office {
   grid-column: 1 / -1;
-  margin-top: 20px;
 }
 
 .live-chat {
