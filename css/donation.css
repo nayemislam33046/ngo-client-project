@@ -26,11 +26,6 @@ body {
   transform: translateY(-123%);
 }
 
-.btn-primary{
-  background-color: #364f6b;
-  border-color: #33475f;
-}
-
 .donation-wrapper {
   max-width: 1100px;
   margin: 20px auto;
