@@ -62,7 +62,7 @@ body {
 }
 
 .donation-description {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20.8px;
   color: rgba(84, 84, 84, 1);
@@ -159,7 +159,7 @@ body {
 
 .custom-list li a {
   color: #4a7ab5;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .list-box li {
