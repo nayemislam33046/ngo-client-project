@@ -137,13 +137,13 @@
   .container {
     padding: 0 20px;
   }
-    .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-    }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
   .menu-toggle span {
     display: block;
     width: 27px;
@@ -237,7 +237,7 @@
     gap: 0;
     padding: 0 20px;
 
-    height: 500px ;
+    height: 500px;
     overflow-y: scroll;
   }
   .nav-item {
@@ -359,21 +359,6 @@
     flex-direction: column;
     align-items: center;
   }
-  /* .offices-row {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: row;
-    gap: 20px;
-  } */
-
-  /* .office-group {
-    flex-direction: column;
-  } */
-
-  /* .office-card {
-    height: 150px;
-  } */
 
   /* Footer section */
   .footer-logo {
@@ -586,11 +571,6 @@
     height: 230px;
   }
 
-  /* offices section */
-  /* .offices-row {
-    flex-direction: column;
-  } */
-
   .offices-row {
     flex-direction: column;
     align-items: center;
@@ -634,10 +614,6 @@
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  /* .offices-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  } */
 
   .footer-main {
     flex-direction: column;
@@ -683,7 +659,7 @@
   }
 
   /* navigation section */
-  
+
   .navigation .logo-section .logo-parent .foundation-names p {
     font-size: 13px;
   }

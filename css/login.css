@@ -1,0 +1,166 @@
+body {
+  background-color: #f5f5f5;
+}
+.title-name {
+  font-size: 35px;
+  font-family: Pridi;
+  color: #ffffff;
+}
+.title-box {
+  background-color: #3d82cf;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.login-section {
+  padding: 30px 10px;
+}
+
+.select-options {
+  transform: translateY(-100%);
+}
+
+.custom-select.open .select-options {
+  transform: translateY(-123%);
+}
+
+.login-box {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Pridi;
+  color: rgba(4, 49, 51, 1);
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 36px;
+}
+.login-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Pridi;
+}
+.login-box input {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  border: none;
+  border-radius: 3px;
+  font-family: Pridi;
+  background-color: rgba(239, 240, 242, 1);
+}
+
+.login-box input::placeholder {
+  color: rgba(131, 131, 131, 1);
+  font-family: Pridi;
+  font-size: 14px;
+}
+.login-box button {
+  width: 250px;
+  min-height: 50px;
+  padding: 5px 0;
+  background-color: rgba(61, 130, 207, 1);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: Pridi;
+  margin: 0 auto;
+  display: block;
+}
+.login-box button:hover {
+  background-color: #336bb7;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  font-family: Pridi;
+  color: rgba(131, 131, 131, 1);
+}
+.login-link a {
+  color: rgba(61, 130, 207, 1);
+  text-decoration: none;
+}
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.or-devide {
+  text-align: center;
+  font-size: 20px;
+  color: rgba(4, 49, 51, 1);
+  margin: 20px 0;
+  font-family: Pridi;
+}
+
+.sign-btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sign-btn-group button {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #043133;
+  font-size: 14px;
+  border: 1px solid rgba(210, 210, 210, 1);
+}
+.sign-btn-group button img {
+  transform: scale(0.8);
+}
+
+.sign-btn-group button:hover {
+  background: transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+  font-family: Pridi;
+  color: rgba(61, 130, 207, 1);
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .login-box {
+    margin: 30px 20px;
+    padding: 30px 20px;
+  }
+  .login-box h2 {
+    font-size: 28px;
+  }
+  .login-box button {
+    width: 100%;
+    font-size: 18px;
+    min-height: 40px;
+  }
+
+  .sign-btn-group{
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .sign-btn-group button {
+  
+  font-size: 13px;
+  
+}
+.sign-btn-group button img {
+  transform: scale(0.7);
+}
+}

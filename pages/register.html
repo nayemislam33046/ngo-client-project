@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ASHF | Gallery</title>
+    <title>ASHF | Register</title>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/effect.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
-    <link rel="stylesheet" href="../css/gallery.css" />
+    <link rel="stylesheet" href="../css/register.css" />
     <link rel="icon" type="image/png" href="/assets/logo.svg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pridi:wght@300;400;500;600;700&display=swap"
@@ -25,7 +25,7 @@
   </head>
   <body>
     <div class="menu-overlay"></div>
-    <!-- Header -->
+    <!-- header -->
     <header class="header motion-nav">
       <div class="top-bar">
         <div class="container">
@@ -81,7 +81,6 @@
                       />
                     </svg>
                   </div>
-
                   <ul class="language-menu">
                     <li data-lang="en">English</li>
                     <li data-lang="bn">Bangla</li>
@@ -98,7 +97,7 @@
         </div>
       </div>
     </header>
-    <!-- Navigation -->
+    <!-- navigation -->
     <nav class="navigation">
       <div class="container">
         <a href="../index.html">
@@ -150,6 +149,7 @@
           <li class="nav-item dropdown">
             <a href="./initiatives.html"
               >Our Initiatives
+
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
                 <path
                   d="M1 1L7 6L13 1"
@@ -162,37 +162,31 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a href="/pages/initiatives.html#donation-funds"
-                  >Donation Funds</a
+                <a href="/pages/initiatives.html#zakat">Zakat Programs</a>
+              </li>
+              <li><a href="/pages/initiatives.html#sadaqah">Sadaqah</a></li>
+              <li>
+                <a href="/pages/initiatives.html#food-distribution"
+                  >Food Distribution</a
                 >
               </li>
               <li>
-                <a href="/pages/initiatives.html#ongoing-projects"
-                  >Ongoing Projects</a
+                <a href="/pages/initiatives.html#orphan-support"
+                  >Orphan Support</a
                 >
               </li>
               <li>
-                <a href="/pages/initiatives.html#emergency-relief"
-                  >Emergency Relief</a
-                >
+                <a href="/pages/initiatives.html#winter-aid">Winter Aid</a>
               </li>
               <li>
-                <a href="/pages/initiatives.html#education-support"
-                  >Education Support</a
-                >
-              </li>
-              <li>
-                <a href="/pages/initiatives.html#medical-aid">Medical Aid</a>
-              </li>
-              <li>
-                <a href="/pages/initiatives.html#community-development"
-                  >Community Development</a
+                <a href="/pages/initiatives.html#water-projects"
+                  >Water Projects</a
                 >
               </li>
             </ul>
           </li>
-          <li class="nav-item dropdown active">
-            <a href="#"
+          <li class="nav-item dropdown">
+            <a href="./gallery.html"
               >Gallery
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
                 <path
@@ -204,7 +198,6 @@
                 />
               </svg>
             </a>
-            <div class="nav-indicator"></div>
             <ul class="dropdown-menu">
               <li>
                 <a href="/pages/gallery.html#video" class="gallery-link">
@@ -256,115 +249,76 @@
     </nav>
 
     <div class="title-box">
-      <p class="title-name">Gallery</p>
+      <p class="title-name">Sign Up</p>
     </div>
 
-    <!-- Video Section -->
-    <section class="video" id="video-gallery">
+    <!-- Register Section -->
+    <section class="register-section">
       <div class="container">
-        <h2>Video</h2>
-        <div class="video-grid motion">
-          <div class="video-card">
-            <iframe
-              src="https://www.youtube.com/embed/iYqnQBANlpw?si=pr4j2__JtBMk7iIv"
-              title="YouTube video player"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <h4>The best place to give your valuable donation</h4>
-          </div>
+        <div class="register-box">
+          <h2 class="register-title">Welcome to ASF</h2>
+          <form action="#" class="register-form">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
 
-          <div class="video-card">
-            <iframe
-              src="https://www.youtube.com/embed/yFHB_AYqAQc?si=vc3ZkcvNPsVSjOsI"
-              title="YouTube video player"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <h4>The invitation to Islam in Nepal</h4>
-          </div>
+            <button type="submit" class="btn-primary register-button">
+              Create Account
+            </button>
+          </form>
+          <p class="login-link">
+            Already have an account? <a href="login.html">Log in</a>
+          </p>
 
-          <div class="video-card">
-            <iframe
-              src="https://www.youtube.com/embed/cRh-kbwstcA?si=cwsYTgKKafNWNoe6"
-              title="YouTube video player"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <h4>'Your wedding, our expenses' invitation in Nepal</h4>
+          <p class="or-devide">OR</p>
+
+          <div class="sign-btn-group">
+            <button class="btn-google register-google-btn">
+              <img
+                src="/assets/btn-google.png"
+                alt="Google Logo"
+                class="google-logo"
+              />
+              Sign up with Google
+            </button>
+
+            <button class="btn-github register-github-btn">
+              <img
+                src="/assets/btn-github.png"
+                alt="Github Logo"
+                class="github-logo"
+              />
+              Sign up with Github
+            </button>
           </div>
         </div>
-        <button class="btn-more">More</button>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery" id="photo-gallery">
-      <div class="container">
-        <h2>Photo</h2>
-        <div class="gallery-grid motion">
-          <div class="gallery-item">
-            <img src="/assets/gallery-1.jpg" alt="Iftar Gallery" />
-          </div>
-          <div class="gallery-item">
-            <img src="/assets/gallery-2.jpg" alt="Qurbani Gallery" />
-          </div>
-          <div class="gallery-item">
-            <img src="/assets/gallery-3.jpg" alt="Winter Clothing Gallery" />
-          </div>
-          <div class="gallery-item">
-            <img src="/assets/gallery-4.jpg" alt="Van Distribution Gallery" />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="/assets/gallery-5.jpg"
-              alt="Relief Distribution Gallery"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="/assets/gallery-6.jpg"
-              alt="Tube Well Distribution Gallery"
-            />
-          </div>
-          <div class="gallery-item">
-            <img src="/assets/gallery-7.jpg" alt="Food Distribution Gallery" />
-          </div>
-          <div class="gallery-item">
-            <img src="/assets/gallery-8.jpg" alt="Orphan Gallery" />
-          </div>
-        </div>
-        <button class="btn-more">More</button>
       </div>
 
       <!-- Donation form -->
@@ -407,7 +361,6 @@
               <li data-value="Tubeway">Tubeway</li>
             </ul>
 
-            <!-- real select for backend -->
             <select name="donation" class="donation-select" hidden>
               <option>Donation Fund</option>
               <option>General Fund</option>
@@ -456,40 +409,6 @@
         </p>
       </div>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const videoSection = document.querySelector(".video");
-        const photoSection = document.querySelector(".gallery");
-
-        function showSection(type) {
-          videoSection.classList.remove("active");
-          photoSection.classList.remove("active");
-
-          if (type === "photo") {
-            photoSection.classList.add("active");
-          } else {
-            videoSection.classList.add("active");
-          }
-        }
-
-        const hash = window.location.hash.replace("#", "");
-
-        if (hash === "photo") {
-          showSection("photo");
-        } else {
-          showSection("video");
-        }
-
-        document.querySelectorAll(".gallery-link").forEach((link) => {
-          link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const target = link.getAttribute("href").split("#")[1];
-            history.pushState(null, "", `#${target}`);
-            showSection(target);
-          });
-        });
-      });
-    </script>
     <script src="/js/main.js"></script>
   </body>
 </html>

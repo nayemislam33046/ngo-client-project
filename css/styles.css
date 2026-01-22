@@ -892,6 +892,11 @@ body {
   align-items: center;
 }
 
+.office-card:hover{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
 .registered-office {
   margin: 20px auto 0;
   max-width: 380px;

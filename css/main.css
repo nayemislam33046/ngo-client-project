@@ -145,12 +145,6 @@
   z-index: 999;
 }
 
-/* .language-selector:hover .language-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-} */
-
 .language-selector.active .language-menu {
   opacity: 1;
   visibility: visible;
@@ -172,10 +166,6 @@
 .language-menu li:hover {
   background: #f3f3f3;
 }
-
-/* .language-selector:hover svg {
-  transform: rotate(180deg);
-} */
 
 #language-selector {
   background-color: white;
@@ -215,6 +205,7 @@
   cursor: pointer;
   border: none;
   text-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
 }
 
 .btn-primary {
