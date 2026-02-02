@@ -48,5 +48,6 @@ OR open with Live Server (recommended).
 
 👨‍💻 Developer
 
-Nayem Islam
+-Nayem Islam
+
 Full-Stact Web-Developer (Reactjs,Nextjs,Laravel)
